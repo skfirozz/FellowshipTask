@@ -1,8 +1,6 @@
 <?php
-
 include "/home/admin1/Documents/Fellowship/Functions/Utility/utility.php";
-echo "enter number of flips: ";
+echo "enter a number: ";
 $number=readline();
-Utility::flipCoins($number);
-
+Utility::primeFactors($number)
 ?>

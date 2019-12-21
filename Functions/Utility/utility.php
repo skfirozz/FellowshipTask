@@ -6,9 +6,8 @@ class Utility{
             return false;
         return true;
     }
-/*
-*/
-    public function replaceName()
+
+    static public function replaceName()
     {
         echo "enter userName\n";
         $name=readline();
@@ -62,6 +61,20 @@ class Utility{
         for($i=1;$i<=$number;$i++)
     $value=$value+1.0/$i;
         echo "harmonic value:  $value\n";
+    }
+
+    public static function primeFactors($number)
+    {
+        for($i=2;$i<=$number;$i++){
+           if($number%$i==0){
+               $number=$number/$i;
+               echo $i,"\n";
+            //    echo $number,"\n";
+           }
+           if($number==0)
+        break;
+           
+        }
     }
 }
 ?>

@@ -1,10 +1,10 @@
 <?php
 /********************************************************************
-* @Execution : Fellowship/Functions/MainPrograms $ php distance.php
-* @description :The number of times to Flip Coin. Ensure it is positive integer
-* @Purpose : flipping coin for n number of times....
+* @Execution : Fellowship/Functions/MainPrograms $ php replaceName.php
+* @description :Take User Name as Input. Ensure UserName has min 3 char
+* @Purpose : replacing with userName....
 * @function : Utility/utility
-* @file : flipCoin.php
+* @file : replaceName.php
 * @author : skfirozz <shaikfiroz838@gmail.com>
 * @version : 7.2.24
 * @since : 24-12-2019

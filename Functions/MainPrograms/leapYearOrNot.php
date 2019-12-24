@@ -10,7 +10,6 @@
 * @since : 21-12-2019
 *
 *********************************************************************/
-
 include "/home/admin1/Documents/Fellowship/Functions/Utility/utility.php";
 echo "enter a year:  ";
 $year=readline();

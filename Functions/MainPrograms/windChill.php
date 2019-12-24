@@ -1,10 +1,11 @@
 <?php
 /********************************************************************
-* @Execution : Fellowship/Functions/MainPrograms $ php distance.php
-* @description :The number of times to Flip Coin. Ensure it is positive integer
-* @Purpose : flipping coin for n number of times....
+* @Execution : Fellowship/Functions/MainPrograms $ php windChill.php
+* @description :Write a program WindChil that takes two double command­line arguments t
+    and v and prints the wind chill
+* @Purpose : windXChill Calualtion....
 * @function : Utility/utility
-* @file : flipCoin.php
+* @file : windChill.php
 * @author : skfirozz <shaikfiroz838@gmail.com>
 * @version : 7.2.24
 * @since : 24-12-2019

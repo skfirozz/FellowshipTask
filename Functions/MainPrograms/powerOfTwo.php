@@ -2,9 +2,10 @@
 /********************************************************************
 * @Execution : Fellowship/Functions/MainPrograms $ php powerOfTwo.php
 * @description :The number of times to Flip Coin. Ensure it is positive integer
-* @Purpose : flipping coin for n number of times....
+* @Purpose : This program takes a command­line argument N and prints a table of the
+   powers of 2 that are less than or equal to 2^N ..
 * @function : Utility/utility
-* @file : flipCoin.php
+* @file : powerOfTwo.php
 * @author : skfirozz <shaikfiroz838@gmail.com>
 * @version : 7.2.24
 * @since : 24-12-2019

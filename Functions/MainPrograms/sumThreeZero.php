@@ -1,10 +1,11 @@
 <?php
 /********************************************************************
-* @Execution : Fellowship/Functions/MainPrograms $ php distance.php
-* @description :The number of times to Flip Coin. Ensure it is positive integer
-* @Purpose : flipping coin for n number of times....
+* @Execution : Fellowship/Functions/MainPrograms $ php sumThreeZero.php
+* @description :A program with cubic running time. Read in N integers and counts the
+    number of triples that sum to exactly 0.
+* @Purpose : finding sum of three are zero....
 * @function : Utility/utility
-* @file : flipCoin.php
+* @file : sumThreeZero.php
 * @author : skfirozz <shaikfiroz838@gmail.com>
 * @version : 7.2.24
 * @since : 24-12-2019

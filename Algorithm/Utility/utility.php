@@ -331,5 +331,33 @@ class Utility{
         echo $t,"\n";
         return $t;
     }
+
+    /*
+    *@description : converting decimal value to binary value    
+    *$parameter : reads the decimal value  from the user  
+    */
+    public static function sqrt($c)
+    {
+        $t=$c;
+        $epsilon=1e-15;
+        while(abs($t-$c/$t) > $epsilon*$t)
+        $t=(($c/$t)+$t)/2;
+        echo "$t\n";
+    }
+
+    public static function permutation($str1,$str2)
+    {
+		 if (strlen($str1) == 0) 
+		 	{ 
+	            echo $str2 ," "; 
+	            return; 
+	        } 
+		for($i=0;$i<strlen($str1);$i++)
+		{
+			$ch=$str1[$i];
+			 $ros = $str1.substr(0, $i) +  $str1.substr($i + 1); 
+			 permutation($ros, $str2 + $ch);
+		}
+    }
 }
 ?>

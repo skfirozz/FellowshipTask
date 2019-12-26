@@ -12,7 +12,7 @@ class BusinessLogic{
         echo "not a anagram\n";
 
     }
-
+    
     
     public static function bubbleSort($str1)
     {

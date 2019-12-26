@@ -261,7 +261,11 @@ class Utility{
     public static function getInt()
     {
         fscanf(STDIN,"%d\n",$n);
-        
+        while(!is_numeric($n)){
+            echo "enter numberic value: \n";
+            fscanf(STDIN,"%d\n",$n);
+        }
+        return $n;
     }
 
 
@@ -283,5 +287,15 @@ class Utility{
         }
         return $array;
     }
+    public static function primePalindrome($array)
+    {
+        for($i=0;$i<count($array);$i++){
+            $value=$array[$i];
+            while($value!=0){
+                $value=$value;
+            }
+        }
+    }
+
 }
 ?>

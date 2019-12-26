@@ -34,6 +34,7 @@ class Utility{
               $count++;
             }
         }
+        // echo "\n\nfrom 0 to 1000 there are : $count\n";
         return $array;
     }
     /*
@@ -41,7 +42,7 @@ class Utility{
     *$parameter : reads the input prime number array 
     *$return : returns the prime palindrome numbers  
     */
-    public static function primePalindrome($array)
+    public static function primeAnagram($array)
     {
         $c=0;
         $primePal=array();
@@ -57,7 +58,7 @@ class Utility{
             }
 			for($j=0;$j<count($array);$j++)
 			{
-				if( $finValue==$array[$j]&& $finValue >9)
+				if( $finValue==$array[$j]&& $finValue >11)
 				{
                     $primePal[$c]=$array[$j];
 					$c++;
@@ -72,19 +73,19 @@ class Utility{
     *$parameter : reads the input array from the prime range 
     *$return : returns the prime anagram numbers  
     */
-    public static function primeAnagram($array)
+    public static function primePalindrome($array)
     {
         for($i=0;$i<count($array);$i++){
             if($array[$i]>9){
-                $val=BusinessLogic::bubbleSort($array[$i]);
-                for($j=0;$j<count($array);$j++){
-                    if($val==$array[$j] && $i != $j)
-                        echo $val," ";
+                $temp=$i;
+                while($temp !=0 ){
+                    $val=floor($temp%10);
+                    $temp=floor($temp/10);
+                    
                 }
             }
         }
     }
-
 
     /*
     *@description : reads the words from the file
@@ -115,7 +116,7 @@ class Utility{
             while($low<=$last){
                 $mid=round(($low+$last)/2);
                 if($word==$array[$mid])
-                    return $mid;
+                    return true;
                 else if($word > $array[$mid])
                     $low=$mid+1;
                 else

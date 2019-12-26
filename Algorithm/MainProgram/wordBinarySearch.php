@@ -12,12 +12,14 @@
 *********************************************************************/
 include "/home/admin1/Documents/Fellowship/Algorithm/Utility/utility.php";
 $words=Utility::readWords();
-echo $words," ";
+echo $words," \n";
 $array=explode(" ",$words);
+$arr=BusinessLogic::bubbleSort($array);
 echo "enter the word to search: ";
 $word=readline();
-if(Utility::binarySearch($array,$word) != false )
-echo "word found\n";
+if(Utility::binarySearch($arr,$word))
+echo "found\n";
 else 
-echo "$word is not in the list\n";
+echo "not found\n";
+
 ?>

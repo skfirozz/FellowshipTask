@@ -256,11 +256,17 @@ class Utility{
     public static function primePalindrome($array)
     {
         for($i=0;$i<count($array);$i++){
-            $value=$array[$i];
-            while($value!=0){
-                $value=$value;
+            $temp=$array[$i];
+            $value=0;
+            while($temp != 0){
+                $val=$temp%10;
+                $temp=floor($temp/10);
+                $value=$value*10+$val;
             }
+            if($value==$i)
+                echo $i," ";
         }
+        echo "\n";
     }
 
 }

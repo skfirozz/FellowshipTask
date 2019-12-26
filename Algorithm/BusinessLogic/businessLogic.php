@@ -19,8 +19,8 @@ class BusinessLogic{
     */
     public static function bubbleSort($str1)
     {
-        for($i=0;$i<strlen($str1);$i++){
-            for($j=$i+1;$j<strlen($str1);$j++){
+        for($i=0;$i<count($str1);$i++){
+            for($j=$i+1;$j<count($str1);$j++){
                if($str1[$i] > $str1[$j]){
                    $temp=$str1[$i];
                    $str1[$i]=$str1[$j];

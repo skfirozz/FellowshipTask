@@ -190,40 +190,6 @@ class Utility{
         echo $value,"\n";
     }
 
-    
-    public static function randomTicPosition($array,$count)
-    {
-        $row= rand(0,2);
-        $col= rand(0,2);
-        echo $row," ",$col,"\n";
-        Utility::checkTicPosition($row,$col,$array,$count);
-    }
-
-    public static function checkTicPosition($row,$col,$array,$count)
-    {
-        if($array[$row][$col]==0)
-            $array[$row][$col]==1;
-        else
-            Utility::randomTicPosition($array,$count);    
-        echo $array[$row][$col],"\n";
-        $count++;
-        echo $count,"\n";
-        if($count<=9)
-          Utility::randomTicPosition($array,$count);
-        Utility::tictac($array);
-    }
-
-    public static function ticTac($array)
-    {
-        for($i=0;$i<3;$i++){
-            for($j=0;$j<3;$j++){
-                echo $array[$i][$j]," ";
-            }
-            echo "\n";
-        }
-    }
-    
-
     /*
     *@description : finding the roots in quadratic equation
     *$parameter : reads the input a, b and c from user 

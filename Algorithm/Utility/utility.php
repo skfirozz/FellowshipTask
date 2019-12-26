@@ -65,5 +65,15 @@ class Utility{
             }
         }
     }
+
+
+    public static function readWords()
+    {
+        $file="/home/admin1/Documents/Fellowship/Algorithm/words.txt";
+        $open=fopen($file,"r") or die("can't open the file");
+        $word=fread($open,filesize($file));
+        fclose($file);
+        return $word;
+    }
 }
 ?>

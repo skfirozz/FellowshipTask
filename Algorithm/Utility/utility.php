@@ -270,10 +270,66 @@ class Utility{
         echo "celsiud-----$cel\n";
     }
 
+    /*
+    *@description : calculating the monthly intrest payment on principle amount    
+    *$parameter : reads the years, money and rate of intrest from the user  
+    */
     public static function monthlyPayment($years,$money,$intr)
     {
         $n=12*$years;
-        
+        $r=$intr/(12*100);
+        $payment=($money*$r)/1-pow(1+$r,-$n);
+        echo "monthly payment is----$payment\n";
+    }
+
+     /*
+    *@description : converting decimal value to binary value    
+    *$parameter : reads the decimal value  from the user  
+    *@return : returns the array which consists of binary value in reverse order
+    */
+    public static function decmalToBinary($dec)
+    {
+        $binary=array();
+        $c=0;
+        $dup=$dec;
+        while($dup != 0){
+            $val=$dup%2;
+            $binary[$c]=$val;
+            $c++;
+            $dup=floor($dup/2);
+        }
+        for($i=count($binary)-1;$i>=0;$i--)
+            echo $binary[$i];
+        echo "\n";
+        return $binary;
+    }
+
+    /*
+    *@description : converting decimal value to binary value    
+    *$parameter : reads the decimal value  from the user  
+    *@return : return the decimal value after operation of swaping nibbles and converting into binary
+    */
+    public static function binaryNibbles($binary)
+    {
+        for($i=count($binary);$i<8;$i++)//adding 0 for starting when the length of the number is below 8
+              $binary[$i]=0;
+        for($i=count($binary)-1;$i>=0;$i--)//swaping the two halfs of the number
+        echo $binary[$i];
+        echo "\n";
+        for($i=0;$i<4;$i++){
+            $t=4+$i;
+            $temp=$binary[$i];
+            $binary[$i]=$binary[$t];
+            $binary[$t]=$temp;
+        }
+        // for($i=count($binary)-1;$i>=0;$i--)
+        // echo $binary[$i];
+        echo "\n";
+        $t=0;
+        for($i=count($binary)-1;$i>=1;$i--)
+            $t=($t+$binary[$i])*2;
+        echo $t,"\n";
+        return $t;
     }
 }
 ?>

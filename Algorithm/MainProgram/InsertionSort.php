@@ -11,7 +11,13 @@
 * @since : 26-12-2019
 *********************************************************************/
 include "/home/admin1/Documents/Fellowship/Algorithm/Utility/utility.php";
-$words=Utility::readWords();
-$array=explode(" ",$words);
+// $words=Utility::readWords();
+// $array=explode(" ",$words);
+echo "enter the size of the words: ";
+$size=readline();
+echo "enter the words: ";
+$array=array();
+for($i=0;$i<$size;$i++)
+$array[$i]=readline();
 Utility::insertionSort($array);
 ?>

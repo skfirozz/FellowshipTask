@@ -4,6 +4,8 @@ class BusinessLogic{
     {
         $str1=strtolower($str1);
         $str2=strtolower($str2);
+        $str1=str_split($str1);
+        $str2=str_split($str2);
         $str1=BusinessLogic::bubbleSort($str1);
         $str2=BusinessLogic::bubbleSort($str2);
         if($str1==$str2)
@@ -54,6 +56,26 @@ class BusinessLogic{
             case 6: echo "SUNDAY\n";
                 break;
         }
+    }
+    public static function primeAna($array,$i,$primePal,$c)
+    {
+         $temp=$array[$i];
+		$finValue=0;
+		while(floor($temp !=0))
+		{
+			$t=floor($temp%10);
+			$temp=floor($temp/10);
+            $finValue=$finValue*10+$t;
+        }
+		for($j=0;$j<count($array);$j++)
+		{
+		    if( $finValue==$array[$j]&& $finValue >11){
+                $primePal[$c]=$array[$j];
+				$c++;
+			}
+        }
+        return $primePal;
+
     }
 }
 ?>

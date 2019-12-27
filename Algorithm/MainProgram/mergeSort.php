@@ -15,6 +15,5 @@ include "/home/admin1/Documents/Fellowship/Algorithm/Utility/utility.php";
 $words=Utility::readWords();
 $array=explode(" ",$words);
 $lb=0;$up=count($array);
-$val=Utility::div($array,$lb,$up);
-echo $val;
+Utility::div($array,$lb,$up);
 ?>

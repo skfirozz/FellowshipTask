@@ -48,24 +48,10 @@ class Utility{
         $primePal=array();
         for($i=0;$i<count($array);$i++)
 		{
-			$temp=$array[$i];
-			$finValue=0;
-			while(floor($temp !=0))
-			{
-				$t=floor($temp%10);
-				$temp=floor($temp/10);
-                $finValue=$finValue*10+$t;
-            }
-			for($j=0;$j<count($array);$j++)
-			{
-				if( $finValue==$array[$j]&& $finValue >11)
-				{
-                    $primePal[$c]=$array[$j];
-					$c++;
-				}
-			}
+             $arr=BusinessLogic::primeAna($array,$i,$primePal,$c);
+            //  Utility::primePalindrome($array,$i);
         }
-        return $primePal;
+        echo $arr;
     }
 
     /*
@@ -73,18 +59,19 @@ class Utility{
     *$parameter : reads the input array from the prime range 
     *$return : returns the prime anagram numbers  
     */
-    public static function primePalindrome($array)
+    public static function primePalindrome($array,$i)
     {
-        for($i=0;$i<count($array);$i++){
+        // for($i=0;$i<count($array);$i++){
             if($array[$i]>9){
                 $temp=$i;
                 while($temp !=0 ){
                     $val=floor($temp%10);
                     $temp=floor($temp/10);
-                    
+                    echo "value ", $val,"\n";
+                    echo $temp," ";
                 }
             }
-        }
+        // }
     }
 
     /*
@@ -179,17 +166,17 @@ class Utility{
 		if($lb < $up)
 		{
 		    $mid=floor(($lb+$up)/2);
-			div($array, $lb, $mid);
-			div($array, $mid+1, $up);
-			merge($array, $lb, $mid, $up);
+			Utility::div($array, $lb, $mid);
+			Utility::div($array, $mid+1, $up);
+			Utility::merge($array, $lb, $mid, $up);
 		}
 	}
 	public static function merge($array,$lb,$mid,$up)
 	{
 		$n1=$mid-$lb+1;
 		$n2=$up-$mid;
-		$array1=new SplFixedArray($n1);
-		$array2=new SplFixedArray($n2);
+		$array1=array();
+		$array2=array();
 		for ($i = 0; $i < count($array1); $i++) 
 			$array1[$i]=$array[$lb+$i];
 		for ($j = 0; $j < count($array2); $j++) 
@@ -356,8 +343,8 @@ class Utility{
 		for($i=0;$i<strlen($str1);$i++)
 		{
 			$ch=$str1[$i];
-			 $ros = $str1.substr(0, $i) +  $str1.substr($i + 1); 
-			 permutation($ros, $str2 + $ch);
+			 $ros = $str1.substr(0, $i) .  $str1.substr($i + 1); 
+			 Utility::permutation($ros,  $ch);
 		}
     }
 }

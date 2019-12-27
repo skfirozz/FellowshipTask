@@ -199,8 +199,8 @@ class Utility{
         $delta=$b*$b-4.0*$a*$c;
         $delta=sqrt($delta);
         echo $delta,"\n";
-        $r1=(-$b+$delta)/2.0*$a;
-        $r2=(-$b-$delta)/2.0*$a;
+        $r1=(-$b+$delta)/(2*$a);
+        $r2=(-$b-$delta)/(2*$a);
         echo "r1  ", $r1;
         echo "\nr1  ", $r2;
     }
@@ -212,7 +212,7 @@ class Utility{
     public static function windChill($t,$v)
     {
         $pow=pow($v,0.16);
-        $w=35.74+0.6215*$t+(0.4275*$t- 35.75)*$pow;
+        $w=35.74+(0.6215*$t)+(((0.4275*$t)- 35.75)*$pow);
         echo $w,"\n";
     }
 

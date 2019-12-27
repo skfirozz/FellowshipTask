@@ -49,8 +49,7 @@ class Utility{
         for($i=0;$i<count($array);$i++){
             $temp=$array[$i];
             $finValue=0;
-            while(floor($temp !=0))
-            {
+            while(floor($temp !=0)){
                 $t=floor($temp%10);
                 $temp=floor($temp/10);
                 $finValue=$finValue*10+$t;
@@ -74,11 +73,9 @@ class Utility{
     public static function primePalindrome($array)
     {
         $rev = 0;
-        for ($i = 0; $i <count($array); $i++)   
-        {
+        for ($i = 0; $i <count($array); $i++){
             $n = $array[$i];
-            while (floor($n))
-            {
+            while (floor($n)){
                 $b = $n%10;
                 $rev = $rev*10 + $b;
                 $n /= 10;
@@ -111,8 +108,7 @@ class Utility{
     public static function binarySearch($array,$word)
     {
         $size=count($array);
-        $mid;
-        $low=0;
+        $mid;$low=0;
         $last=$size-1;
         for($i=0;$i<$size;$i++){
             while($low<=$last){
@@ -136,12 +132,10 @@ class Utility{
     */
     public static function insertionSort($array)
     {
-        for($i=1;$i<count($array);$i++)
-		{
+        for($i=1;$i<count($array);$i++){
 			$temp=$array[$i];
 		    $j=$i-1;
-			while($j>=0 && $array[$j] > $temp)
-			{
+			while($j>=0 && $array[$j] > $temp){
 				$array[$j+1]=$array[$j];
 				$j=$j-1;
 			}
@@ -318,6 +312,27 @@ class Utility{
         for($i=0;$i<count($array);$i++)
         echo $array[$i]," ";
      echo "\n";
+    }
+    public static function guessNumber($number,$search)
+    {
+        $start=0;
+        $value=pow(2,$number);
+        $end=$value;
+        $mid=floor($start+$end)/2;
+        $bool=true;
+        while($bool){
+            echo "enter 1 if =$mid\nenter 2 if <$mid\nenter 3 if >$mid\n";
+            $user=readline();
+            if($user==1){
+                echo "your number is: $mid\n";
+                $bool=false;
+                break;
+            }
+            else if($user==2)
+                $mid=floor($mid)/2;
+            else if($user==3)
+                $mid=floor($mid+$end)/2;
+        } 
     }
 }
 ?>

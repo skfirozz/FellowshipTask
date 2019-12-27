@@ -1,6 +1,6 @@
 <?php
 /********************************************************************
-* @Execution : Fellowship/Algorithm/MainPrograms $ php wordBubbleSort.php
+* @Execution : Fellowship/Algorithm/MainPrograms $ php dayOfWeek.php
 * @description : To the Util Class add dayOfWeek static function that takes a date as input and
     prints the day of the week that date falls on. Your program should take three
     command­line arguments: m (month), d (day), and y (year).

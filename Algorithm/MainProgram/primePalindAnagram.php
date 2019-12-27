@@ -15,13 +15,10 @@ echo "enter range:\n";
 $range=readline();
 $array=Utility::primeRange($range);
 echo "prime Numbers are:\n";
-
 Utility::dispayArray($array);
 
 echo "\n\nprime Palindromes are: ";
 $anagram=Utility::primePalindrome($array);
-
-
 
 echo "\nprime Anagrams are:\n";
 $prim=Utility::primeAnagram($array);

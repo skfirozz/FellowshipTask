@@ -1,6 +1,5 @@
 <?php
 include "/home/admin1/Documents/Fellowship/Algorithm/Utility/utility.php";
-
 $array=Utility::primeRange(1000);
 $reverseArray=array();
 $c=0;

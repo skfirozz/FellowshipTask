@@ -13,11 +13,17 @@
 include "/home/admin1/Documents/Fellowship/Algorithm/Utility/utility.php";
 echo "enter range:\n";
 $range=readline();
-echo "prime Anagrams are:\n";
 $array=Utility::primeRange($range);
-$prim=Utility::primeAnagram($array);
-for($i=0;$i<count($prim);$i++)
-    echo $prim[$i]," ";
+echo "prime Numbers are:\n";
+
+Utility::dispayArray($array);
+
 echo "\n\nprime Palindromes are: ";
 $anagram=Utility::primePalindrome($array);
+
+
+
+echo "\nprime Anagrams are:\n";
+$prim=Utility::primeAnagram($array);
+
 ?>

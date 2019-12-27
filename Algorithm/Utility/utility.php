@@ -46,12 +46,24 @@ class Utility{
     {
         $c=0;
         $primePal=array();
-        for($i=0;$i<count($array);$i++)
-		{
-             $arr=BusinessLogic::primeAna($array,$i,$primePal,$c);
-            //  Utility::primePalindrome($array,$i);
+        for($i=0;$i<count($array);$i++){
+            $temp=$array[$i];
+            $finValue=0;
+            while(floor($temp !=0))
+            {
+                $t=floor($temp%10);
+                $temp=floor($temp/10);
+                $finValue=$finValue*10+$t;
+            }
+            for($j=0;$j<count($array);$j++){
+                if( $finValue==$array[$j]){
+                    $primePal[$c]=$array[$j];
+                    echo $array[$j]," ";
+                    $c++;
+                }
+            }
         }
-        echo $arr;
+        return $primePal;
     }
 
     /*
@@ -59,19 +71,22 @@ class Utility{
     *$parameter : reads the input array from the prime range 
     *$return : returns the prime anagram numbers  
     */
-    public static function primePalindrome($array,$i)
+    public static function primePalindrome($array)
     {
-        // for($i=0;$i<count($array);$i++){
-            if($array[$i]>9){
-                $temp=$i;
-                while($temp !=0 ){
-                    $val=floor($temp%10);
-                    $temp=floor($temp/10);
-                    echo "value ", $val,"\n";
-                    echo $temp," ";
-                }
+        $rev = 0;
+        for ($i = 0; $i <count($array); $i++)   
+        {
+            $n = $array[$i];
+            while (floor($n))
+            {
+                $b = $n%10;
+                $rev = $rev*10 + $b;
+                $n /= 10;
             }
-        // }
+            if ($rev == $array[$i])
+                echo $array[$i] . " ";
+            $rev=0;
+        }
     }
 
     /*
@@ -152,63 +167,11 @@ class Utility{
                 } 
             }
         }
-        for($i=0;$i<count($array);$i++){
-            echo $array[$i]," ";
-        }
+        // for($i=0;$i<count($array);$i++){
+            // echo $array[$i]," ";
+        // }
     }
-
-    /*
-    *@description : sorting the set of words using MergeSort 
-    *$parameter : reads the input words of an array from the user  
-    */
-    public static function div($array,$lb,$up)
-	{
-		if($lb < $up)
-		{
-		    $mid=floor(($lb+$up)/2);
-			Utility::div($array, $lb, $mid);
-			Utility::div($array, $mid+1, $up);
-			Utility::merge($array, $lb, $mid, $up);
-		}
-	}
-	public static function merge($array,$lb,$mid,$up)
-	{
-		$n1=$mid-$lb+1;
-		$n2=$up-$mid;
-		$array1=array();
-		$array2=array();
-		for ($i = 0; $i < count($array1); $i++) 
-			$array1[$i]=$array[$lb+$i];
-		for ($j = 0; $j < count($array2); $j++) 
-			$array2[$j]=$array[$mid+1+$j];	
-		$i=0;$j=0;$k=$lb;
-		    while($i < $n1 && $j < $n2)
-			{
-				if($array1[$i] > $array2[$j])
-				{
-					$array[$k]=$array2[$j];
-					$k++;$j++;
-				}
-				else {
-					$array[$k]=$array1[$i];
-					$i++;$k++;
-				}
-			}
-			while($i<$n1)
-			{
-				$array[$k]=$array1[$i];
-				$i++;
-				$k++;
-			}
-			while($j<$n2)
-			{
-				$array[$k]=$array2[$j];
-				$j++;
-				$k++;
-            }
-            return $array;
-    }
-    
+  
      /*
     *@description : vending Machine  
     *$parameter : reads the input amount and notes from the user  
@@ -222,15 +185,17 @@ class Utility{
         for($i=count($array)-1;$i>=0;$i--){
             if($array[$i] <=$money ){
                 $count=$count+floor($money/$array[$i]);
+                echo $array[$i],"----",floor($money/$array[$i]);
+                echo "\n";
                 $money=$money%$array[$i];
                 $notes[$c]=$array[$i];
                 $c++;
             }
         }
         echo "the minimum number of notes are : ",$count,"\n";
-        for($i=0;$i<count($notes);$i++)
-        echo $notes[$i]," ";
-        echo "\n";
+        // for($i=0;$i<count($notes);$i++)
+        // echo $notes[$i]," ";
+        // echo "\n";
     }
 
      /*
@@ -239,10 +204,11 @@ class Utility{
     */
     public static function dayOfWeek($year,$month,$date)
     {
-        $y=$year-(14-$month)/12;
-		$x=$y+$y/4-$y/100+$y/400;
-		$m=$month+12*((14-$month)/12)-2;
-        $day=($date+$x+31*$m/12)%7;
+        $y=$year- ((14-$month)/12);
+		$x=$y+($y/4)-($y/100)+($y/400);
+		$m=$month+(12*((14-$month)/12))-2;
+        $day=($date+$x+f((31*$m)/12))%7;
+        echo $day,"  "; 
         BusinessLogic::day($day);
     }
 
@@ -346,6 +312,12 @@ class Utility{
 			 $ros = $str1.substr(0, $i) .  $str1.substr($i + 1); 
 			 Utility::permutation($ros,  $ch);
 		}
+    }
+    public static function dispayArray($array)
+    {
+        for($i=0;$i<count($array);$i++)
+        echo $array[$i]," ";
+     echo "\n";
     }
 }
 ?>

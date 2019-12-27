@@ -41,19 +41,19 @@ class BusinessLogic{
     {
         switch($day)
         {
-            case 0: echo "MONDAY\n";
+            case 1: echo "MONDAY\n";
                 break;
-            case 1: echo "TUESDAY\n";
+            case 2: echo "TUESDAY\n";
                 break;
-            case 2: echo "WENDSDAY\n";
+            case 3: echo "WENDSDAY\n";
                 break;
-            case 3: echo "THURSDAY\n";
+            case 4: echo "THURSDAY\n";
                 break;
-            case 4: echo "FRIDAY\n";
+            case 5: echo "FRIDAY\n";
                 break;
-            case 5: echo "SATURDAY\n";
+            case 6: echo "SATURDAY\n";
                 break;
-            case 6: echo "SUNDAY\n";
+            case 0: echo "SUNDAY\n";
                 break;
         }
     }
@@ -75,7 +75,24 @@ class BusinessLogic{
 			}
         }
         return $primePal;
-
+    }
+    public static function intArray()
+    {
+        echo "enter the int array size: ";
+        $intSize=readline();
+        $intArray=array();
+        for($i=0;$i<$intSize;$i++)
+        $intArray[$i]=readline();
+        return $intArray;
+    }
+    public static function stringArray()
+    {
+        echo "enter the size of string array: ";
+        $stringSize=readline();
+        $stringArray=array();
+        for($i=0;$i<$stringSize;$i++)
+        $stringArray[$i]=readline();
+    return $stringArray;
     }
 }
 ?>

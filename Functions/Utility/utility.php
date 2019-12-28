@@ -21,8 +21,7 @@ class Utility{
     {
         echo "enter userName\n";
         $name=readline();
-        if(Utility::nameValidation($name) && strlen($name) > 2)
-        {
+        if(Utility::nameValidation($name) && strlen($name) > 2){
             $mainTemplate="Hello <<userName>>, How are you?";
             echo str_replace("<<userName>>", $name, $mainTemplate)."\n";
         }
@@ -39,8 +38,7 @@ class Utility{
     static public function flipCoins($number)
     {
         $heads=0; $tails=0;
-        for($i=0;$i<$number;$i++)
-        {
+        for($i=0;$i<$number;$i++){
            if(random_int(0,1)==1)
                $heads++;
            else 
@@ -68,8 +66,7 @@ class Utility{
     static public function powerOfTwo($power)
     {
         if($power>0 && $power <31) {
-            for($i=1;$i<=$power;$i++)
-            {
+            for($i=1;$i<=$power;$i++){
                 $value=2**$i;
                 echo $value,"\n";
             }
@@ -95,12 +92,10 @@ class Utility{
     */
     public static function primeFactors($number)
     {
-        for($i=2;$i<=$number;$i++)
-        {
+        for($i=2;$i<=$number;$i++){
             $count=0;
             if($number%$i==0)
-            for($j=2;$j<=$i;$j++)
-            {
+            for($j=2;$j<=$i;$j++){
                 if($i%$j==0)
                 $count++;
             }
@@ -141,8 +136,7 @@ class Utility{
     public static function random($number)
     {
         $array=array();
-        for($i=0;$i<$number;$i++)
-        {
+        for($i=0;$i<$number;$i++){
             $value=BusinessLogic::check($i,$array);
             $array[$i]=$value;
             echo $value,"\n";
@@ -216,10 +210,7 @@ class Utility{
         echo $w,"\n";
     }
 
-
-    
-
- /*
+    /*
     *@description : validating name Validation
     *$parameter : reads the input String from user
     *$return : returns {boolean}  
@@ -268,6 +259,5 @@ class Utility{
         }
         echo "\n";
     }
-
 }
 ?>

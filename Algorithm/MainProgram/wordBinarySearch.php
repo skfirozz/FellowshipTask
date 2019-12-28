@@ -19,6 +19,7 @@ echo "enter the word to search: ";
 $word=readline();
 if(Utility::binarySearch($arr,$word))
 echo "found\n";
+
 else 
 echo "not found\n";
 

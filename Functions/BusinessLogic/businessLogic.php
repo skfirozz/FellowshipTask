@@ -1,5 +1,9 @@
 <?php
 class BusinessLogic {
+    /*
+    *@description : checking the random number is exist in array or not
+    *$parameter : reads the input array and random number  from user
+    */
     public static function check($i,$array)
     {
         $random=rand();

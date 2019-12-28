@@ -55,9 +55,9 @@ class Utility{
                 $finValue=$finValue*10+$t;
             }
             for($j=0;$j<count($array);$j++){
-                if( $finValue==$array[$j]){
+                if( $finValue==$array[$j] && $finValue>11 ){
                     $primePal[$c]=$array[$j];
-                    echo $array[$j]," ";
+                    echo $array[$j]," ",$array[$i],"\n";
                     $c++;
                 }
             }
@@ -186,10 +186,7 @@ class Utility{
                 $c++;
             }
         }
-        echo "the minimum number of notes are : ",$count,"\n";
-        // for($i=0;$i<count($notes);$i++)
-        // echo $notes[$i]," ";
-        // echo "\n";
+         echo "the minimum number of notes are : ",$count,"\n";
     }
 
      /*
@@ -293,26 +290,20 @@ class Utility{
         echo "$t\n";
     }
 
-    public static function permutation($str1,$str2)
-    {
-		 if (strlen($str1) == 0) 
-		 	{ 
-	            echo $str2 ," "; 
-	            return; 
-	        } 
-		for($i=0;$i<strlen($str1);$i++)
-		{
-			$ch=$str1[$i];
-			 $ros = $str1.substr(0, $i) .  $str1.substr($i + 1); 
-			 Utility::permutation($ros,  $ch);
-		}
-    }
+    /*
+    *@description : just for displaying array    
+    *$parameter :passing an array  
+    */
     public static function dispayArray($array)
     {
         for($i=0;$i<count($array);$i++)
         echo $array[$i]," ";
-     echo "\n";
+        echo "\n";
     }
+    /*
+    *@description : guess game using binary search     
+    *$parameter : reads the number and search number from the user  
+    */
     public static function guessNumber($number,$search)
     {
         $start=0;

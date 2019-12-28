@@ -1,5 +1,9 @@
 <?php
 class BusinessLogic{
+    /*
+    *@description : checking two strings are anagram or not   
+    *$parameter : parameters are strings
+    */
     public static function anagram($str1,$str2)
     {
         $str1=strtolower($str1);
@@ -57,25 +61,10 @@ class BusinessLogic{
                 break;
         }
     }
-    public static function primeAna($array,$i,$primePal,$c)
-    {
-         $temp=$array[$i];
-		$finValue=0;
-		while(floor($temp !=0))
-		{
-			$t=floor($temp%10);
-			$temp=floor($temp/10);
-            $finValue=$finValue*10+$t;
-        }
-		for($j=0;$j<count($array);$j++)
-		{
-		    if( $finValue==$array[$j]&& $finValue >11){
-                $primePal[$c]=$array[$j];
-				$c++;
-			}
-        }
-        return $primePal;
-    }
+
+    /*
+    *@description : this function purpose is only for integer values   
+    */
     public static function intArray()
     {
         echo "enter the int array size: ";
@@ -85,6 +74,9 @@ class BusinessLogic{
         $intArray[$i]=readline();
         return $intArray;
     }
+    /*
+    *@description : this function purpose is only for string values   
+    */
     public static function stringArray()
     {
         echo "enter the size of string array: ";

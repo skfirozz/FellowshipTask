@@ -53,7 +53,6 @@ class LinkedList{
                      $this->lastNode = $previous;
                 $previous->next = $current->next;
             }
-            
     }
     function search($data)
     {

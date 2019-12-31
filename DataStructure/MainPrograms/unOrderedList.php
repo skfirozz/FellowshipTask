@@ -31,8 +31,6 @@ class LinkedList{
             }
         }
             if($current == $this->firstNode){
-                // if($this->firstNode == 1)
-                //     $this->lastNode = $this->firstNode;
                 $this->firstNode = $this->firstNode->next;
             }
             else{

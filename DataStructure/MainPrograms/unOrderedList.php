@@ -14,8 +14,6 @@ class LinkedList{
         $newNode=new ListNode($data);
         $newNode->next=$this->firstNode;
         $this->firstNode=&$newNode;
-        if($this->lastNode == NULL)
-        $this->lastNode = &$newNode;
     }
 
     function delete($data)

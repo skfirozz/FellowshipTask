@@ -53,17 +53,16 @@ class Palindrome{
     function check()
     {
         $ta=$this->firstNode;
-        // $str1="";$str2="";
+        $str1="";$str2="";
         while($ta != null){
-            // $str1=$str1+$ta->data;
-            // $str2=$ta->data+$str2;
-            echo $ta->data,"  ";
+            $str1=$str1.$ta->data;
+            $str2=$ta->data.$str2;
             $ta=$ta->next;
         }
-        // if($str1==$str2)
-        // return true;
-        // else 
-        // return false;
+        if($str1==$str2)
+        return true;
+        else 
+        return false;
     }
     function show()
     {
@@ -81,9 +80,7 @@ $str=readline();
 for($i=0;$i<strlen($str);$i++){
     $obj->addRear($str[$i]);
 }
-$obj->show();
-$obj->check();
-// if($obj->check())
-// echo "true\n";
-// else echo "false\n";
+if($obj->check())
+echo "true\n";
+else echo "false\n";
 ?>

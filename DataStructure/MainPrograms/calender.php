@@ -1,6 +1,6 @@
 <?php
 include "/home/admin1/Documents/Fellowship/Data/DataStructure/Utility/utility.php";
-function displayCalender($month,$year)
+function Calender($month,$year)
 {
     $days = array(array(" S "," M "," T "," W "," Th"," F "," S "));
     $daysInmonth = array(31,28,31,30,31,30,31,31,30,31,30,31);
@@ -43,7 +43,7 @@ $month = Utility::getInt();
 }
 echo "enter year\n";
 $year = Utility::getInt();
-printCalender(displayCalender($month,$year));
+printCalender(Calender($month,$year));
 
 ?>
 

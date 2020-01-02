@@ -72,29 +72,31 @@ class Utility{
         }
         return $array;
     }
-
-    public static function check($value)
+    public static function primeRange1()
     {
-        $bool=false;
-        $array=Utility::primeRange();
-        for($i=0;$i<count($array);$i++)
-        {
-            if($array[$i]==$value){
-                $bool=true;
-            break;
+        $array=array();
+        $count=0;
+        for($i=2;$i<=1000;$i++){
+            $c=0;
+            for($j=1;$j<=$i;$j++){
+                if($i%$j==0)
+                    $c++;
+            }
+            if($c==2){
+              $array[$count]=$i;
+              $count++;
             }
         }
-        if($bool==true)
-        return true;
-        else 
-        return false;
+        return $array;
     }
 
-    public static function primeAnagram($array)
+    public static function primeAnagramNotAnagram($array)
     {
+        $array1=Utility::primeRange1();
         $count1=0;$count2=0;
         $primeAnagram=array();
         $primeNotAnagram=array();
+       
        for($i=0;$i<=9;$i++){
            for($j=0;$j<count($array[$i]);$j++){
             $temp=$array[$i][$j];
@@ -103,21 +105,50 @@ class Utility{
                 $t=floor($temp%10);
                 $temp=floor($temp/10);
                 $finValue=$finValue*10+$t;
+                
             }
-            if(Utility::check($finValue)){
-                $primeAnagram[$count1]=$array[$i][$j];
-                $count1++;
+            $bool=false;
+            for($l=0; $l< count($array1);$l++)
+            {
+                if($finValue == $array1[$l] && $finValue > 11){
+                    $bool=true;
+                    $primeAnagram[$count1]=$array[$i][$j];
+                    $count1++;
+                break;
+                }
             }
-            else {
+            if($bool == false){
                 $primeNotAnagram[$count2]=$array[$i][$j];
                 $count2++;
             }
            }
         }
         echo "anagrams are:\n";
-        echo implode(" ", $primeAnagram),"\n";
+        echo implode(" ", $primeAnagram),"\n\n";
         echo "not anagrams are:\n";
-        echo implode(" ", $primeNotAnagram),"\n";
+        echo implode(" ", $primeNotAnagram),"\n\n";
+    }
+
+    public static function primeAnagram($array)
+    {
+        $c=0;
+        $primePal=array();
+        for($i=0;$i<count($array);$i++){
+            $temp=$array[$i];
+            $finValue=0;
+            while(floor($temp !=0)){
+                $t=floor($temp%10);
+                $temp=floor($temp/10);
+                $finValue=$finValue*10+$t;
+            }
+            for($j=0;$j<count($array);$j++){
+                if( $finValue==$array[$j] && $finValue>11 ){
+                    $primePal[$c]=$array[$j];
+                    $c++;
+                }
+            }
+        }
+        return $primePal;
     }
 }
 ?>

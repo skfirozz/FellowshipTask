@@ -25,7 +25,7 @@ class Queue{
     }
     function dequeue()
     {
-           $this->firstNode=$this->firstNode->next;
+        $this->firstNode=$this->firstNode->next;
     }
     function currentUser()
     {

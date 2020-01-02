@@ -9,36 +9,23 @@ class Queue{
     }
     function enqueue($name)
     {
-        if($this->firstNode != NULL)
-        {
-            $newNode = new ListNode($name);
-            $ta=$this->firstNode;
-            if($ta->next==null)
-                $ta->next=&$newNode;
-            else{
-                while($ta != null){
-                    if($ta->next==null)
-                    {
-                        $ta->next=&$newNode;
-                        break;
-                    }
-                    $ta=$ta->next;
-                }
-            }
-        }
-        else
-        {
-            $newNode=new ListNode($name);
-            $newNode->next=$this->firstNode;
+        $newNode = new ListNode($name); 
+        if($this->firstNode==null)
             $this->firstNode=&$newNode;
-        }
+        else{
+            $ta=$this->firstNode;
+            while($ta != null){
+                if($ta->next==null){
+                    $ta->next=&$newNode;
+                break;
+                }
+                $ta=$ta->next;
+            }
+        }    
     }
     function dequeue()
     {
-        
-        if($this->firstNode != null){
            $this->firstNode=$this->firstNode->next;
-        }
     }
     function currentUser()
     {
@@ -51,7 +38,6 @@ class Queue{
             $this->bankBalance += $amount;
         else
             $this->bankBalance -= $amount;
-        
     }
     function show()
     {
@@ -72,6 +58,7 @@ for($i=0;$i<$users;$i++){
     $name=readline();
     $obj->enqueue($name);
 }
+$obj->show();
 $obj->show();
 for($i=0;$i<$users;$i++){
      echo "   user:  ",$obj->currentUser(),"\nenter amount: ";

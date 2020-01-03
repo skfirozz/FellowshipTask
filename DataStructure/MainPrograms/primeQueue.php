@@ -1,17 +1,19 @@
 <?php
 include "/home/admin1/Documents/Fellowship/Data/DataStructure/Utility/utility.php";
 include "/home/admin1/Documents/Fellowship/Data/DataStructure/MainPrograms/node.php";
+// include "/home/admin1/Documents/Fellowship/Data/DataStructure/MainPrograms/queue.php";
 $array=Utility::primeRange1();
 $anagram=Utility::primeAnagram($array);
-class stack{
+class Queu{
     public $firstNode;
-    function __construct()
+    public  function __construct()
     {
         $this->firstNode = NULL;
+        
     }
-    function push($data)
+    function enqueue($name)
     {
-        $newNode=new ListNode($data);
+        $newNode = new ListNode($name); 
         if($this->firstNode==null)
             $this->firstNode=&$newNode;
         else{
@@ -23,39 +25,21 @@ class stack{
                 }
                 $ta=$ta->next;
             }
-        }
+        }    
     }
-    function pop()
+    function displayQueue()
     {
         $ta=$this->firstNode;
-        $ba=$ta;
-        if($this->firstNode == null )
-        {
-            return;
-        }
-        else if($ta->next == null){
+        while($ta != null){
             echo $ta->data," ";
-            $this->firstNode=null;
+            $ta=$ta->next;
         }
-        else{    
-            while($ta->next != null){
-                $ba=$ta;
-                $ta=$ta->next;
-            }
-            if($ta->next == null ){
-                echo $ta->data," ";
-                $ba->next=null;
-            }
-        }
+        echo "\n";
     }
 }
-$obj=new stack();
+$obj=new Queu();
 for($i=0;$i<count($anagram);$i++){
-    $obj->push($anagram[$i]);
+    $obj->enqueue($anagram[$i]);
 }
-for($i=0;$i<count($array);$i++){
-    $obj->pop();
-}
-echo "\n\n";
-
+$obj->displayQueue();
 ?>

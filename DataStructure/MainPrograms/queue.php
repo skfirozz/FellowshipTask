@@ -1,14 +1,14 @@
 <?php
 include "/home/admin1/Documents/Fellowship/Data/DataStructure/MainPrograms/node.php";
-class stack{
+class Queu{
     public $firstNode;
-    function __construct()
+    public  function __construct()
     {
         $this->firstNode = NULL;
     }
-    function addrear($data)
+    public static function enqueue($name)
     {
-        $newNode=new ListNode($data);
+        $newNode = new ListNode($name); 
         if($this->firstNode==null)
             $this->firstNode=&$newNode;
         else{
@@ -20,7 +20,12 @@ class stack{
                 }
                 $ta=$ta->next;
             }
-        }
+        }    
+    }
+    public static function dequeue()
+    {
+        echo $this->data," ";
+        $this->firstNode=$this->firstNode->next;
     }
 }
 ?>

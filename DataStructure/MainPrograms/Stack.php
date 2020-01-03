@@ -1,9 +1,6 @@
 <?php
-include "/home/admin1/Documents/Fellowship/Data/DataStructure/Utility/utility.php";
 include "/home/admin1/Documents/Fellowship/Data/DataStructure/MainPrograms/node.php";
-$array=Utility::primeRange1();
-$anagram=Utility::primeAnagram($array);
-class stack{
+class Stack{
     public $firstNode;
     function __construct()
     {
@@ -48,14 +45,14 @@ class stack{
             }
         }
     }
+    function show()
+    {
+        $ta=$this->firstNode;
+        while($ta != null){
+            echo $ta->data," ";
+            $ta=$ta->next;
+        }
+        echo "\n\n";
+    }
 }
-$obj=new stack();
-for($i=0;$i<count($anagram);$i++){
-    $obj->push($anagram[$i]);
-}
-for($i=0;$i<count($array);$i++){
-    $obj->pop();
-}
-echo "\n\n";
-
 ?>

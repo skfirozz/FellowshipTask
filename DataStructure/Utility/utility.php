@@ -143,11 +143,13 @@ class Utility{
             }
             for($j=0;$j<count($array);$j++){
                 if( $finValue==$array[$j] && $finValue>11 ){
-                    $primePal[$c]=$array[$j];
+                    $primePal[$c]=$array[$i];
+                    // echo $array[$i],"  ";
                     $c++;
                 }
             }
         }
+        echo "\n\n";
         return $primePal;
     }
 }

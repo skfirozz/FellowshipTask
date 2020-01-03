@@ -2,11 +2,11 @@
 include "/home/admin1/Documents/Fellowship/Data/DataStructure/MainPrograms/node.php";
 class Queu{
     public $firstNode;
-    public  function __construct()
+    function __construct()
     {
         $this->firstNode = NULL;
     }
-    public static function enqueue($name)
+    function enqueue($name)
     {
         $newNode = new ListNode($name); 
         if($this->firstNode==null)
@@ -22,10 +22,18 @@ class Queu{
             }
         }    
     }
-    public static function dequeue()
+    function show()
     {
-        echo $this->data," ";
-        $this->firstNode=$this->firstNode->next;
+        $ta=$this->firstNode;
+        $count=0;
+        while($ta != null){
+            if($count%7==0)
+            echo "\n";
+            echo $ta->data," ";
+            $count++;
+            $ta=$ta->next;
+        }
+        echo "\n";
     }
-}
+} 
 ?>

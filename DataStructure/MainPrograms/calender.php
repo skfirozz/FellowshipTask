@@ -8,6 +8,7 @@ function Calender($month,$year)
         $daysInmonth[1] = 29;
     }
     $firstDay = Utility::printDay(1,$month,$year);
+    echo $firstDay,"\n";
     $j = $firstDay;
     $date = 1;
     for ($i=1; $i < 7; $i++) {

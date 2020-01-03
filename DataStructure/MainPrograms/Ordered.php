@@ -1,4 +1,18 @@
 <?php
+/********************************************************************
+* @Execution : Fellowship/Data/DataStructure/MainPrograms $ php Ordered.php
+* @description : Read the Text from a file, split it into words and arrange it as Linked List.
+    Take a user input to search a Word in the List. If the Word is not found then add it
+    to the list, and if it found then remove the word from the List. In the end save the
+    list into a file
+* @Purpose : Creating ordered linked list and search if exist add else remove from file....
+* @function : Utility/utility
+* @file : Ordered.php
+* @author : skfirozz <shaikfiroz838@gmail.com>
+* @version : 7.2.24
+* @since : 3-12-2019
+*********************************************************************/
+
 include "/home/admin1/Documents/Fellowship/DataStructure/MainPrograms/node.php";
 include "/home/admin1/Documents/Fellowship/DataStructure/Utility/utility.php";
 class LinkedList{
@@ -25,7 +39,6 @@ class LinkedList{
                     $ta->next=$newNode;
                     $newNode->next=$ba;
                 }
-                    // echo "$ta->data","   ";
                 $ta=$ta->next;
             }
         }
@@ -59,7 +72,6 @@ class LinkedList{
         $bool=true;
         $ta=$this->firstNode;
         while($ta != null){
-           
             if($ta->data == $data){
                 LinkedList::delete($data);
                 echo "deleted $data\n";

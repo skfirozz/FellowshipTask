@@ -1,4 +1,15 @@
 <?php
+/********************************************************************
+* @Execution : Fellowship/Data/DataStructure/MainPrograms $ php primeQueue.php
+* @description :  Take a range of 0 ­ 1000 Numbers and find the Prime numbers in that range. Store
+    the prime numbers in a queue and print reverse 
+*@purpose : printing prime anagrams using queue in reverse manner
+* @function : Utility/utility
+* @file : prime2DArray.php
+* @author : skfirozz <shaikfiroz838@gmail.com>
+* @version : 7.2.24
+* @since : 24-12-2019
+*********************************************************************/
 include "/home/admin1/Documents/Fellowship/Data/DataStructure/Utility/utility.php";
 include "/home/admin1/Documents/Fellowship/Data/DataStructure/MainPrograms/node.php";
 // include "/home/admin1/Documents/Fellowship/Data/DataStructure/MainPrograms/queue.php";

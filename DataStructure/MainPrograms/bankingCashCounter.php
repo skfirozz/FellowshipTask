@@ -1,4 +1,17 @@
 <?php
+/********************************************************************
+* @Execution : Fellowship/Data/DataStructure/MainPrograms $ php bankingCaashCounter.php
+* @description : Create a Program which creates Banking Cash Counter where people
+    come in to deposit Cash and withdraw Cash. Have an input panel to add people
+    to Queue to either deposit or withdraw money and dequeue the people. Maintain
+    the Cash Balance.
+* @Purpose : using queue doing enque and dequeue....
+* @function : Utility/utility
+* @file : bankingCashCounter.php
+* @author : skfirozz <shaikfiroz838@gmail.com>
+* @version : 7.2.24
+* @since : 24-12-2019
+*********************************************************************/
 include "/home/admin1/Documents/Fellowship/Data/DataStructure/MainPrograms/node.php";
 class Queue{
     public $bankBalance=50000;
@@ -50,6 +63,9 @@ class Queue{
     }
 }
 $obj=new Queue();
+for($i=0;$i<10;$i++){
+    $obj->enqueue($i);
+}
 $bool=true;
 echo "enter number of users: ";
 $users=readline();

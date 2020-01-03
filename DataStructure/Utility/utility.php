@@ -144,13 +144,20 @@ class Utility{
             for($j=0;$j<count($array);$j++){
                 if( $finValue==$array[$j] && $finValue>11 ){
                     $primePal[$c]=$array[$i];
-                    // echo $array[$i],"  ";
                     $c++;
                 }
             }
         }
         echo "\n\n";
         return $primePal;
+    }
+    public static function readHashNumbers()
+    {
+        $file="/home/admin1/Documents/Fellowship/Data/DataStructure/files/hashingNumbers.txt";
+        $open=fopen($file,"r") or die("can't open the file");
+        $word=fread($open,filesize($file));
+        fclose($open);
+        return $word;
     }
 }
 ?>

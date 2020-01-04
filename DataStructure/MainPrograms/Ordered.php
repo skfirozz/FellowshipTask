@@ -57,8 +57,6 @@ class LinkedList{
             }
         }
             if($current == $this->firstNode){
-                // if($this->firstNode == 1)
-                //     $this->lastNode = $this->firstNode;
                 $this->firstNode = $this->firstNode->next;
             }
             else{
@@ -105,7 +103,6 @@ $array=explode(" ",$words);
 for($i=0;$i<count($array);$i++){
    $obj->insert($array[$i]);
 }
-// $obj->insert(10);
 $obj->display();
 echo "enter to search: ";
 $search=readline();

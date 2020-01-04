@@ -1,36 +1,59 @@
 <?php
+include "/home/admin1/Documents/Fellowship/Data/DataStructure/MainPrograms/node.php";
 class Utility{
+    public $firstNode;
+    public $lastNode;
+    function __construct()
+    {
+        $this->firstNode = NULL;
+        $this->lastNode = NULL;
+    }
+
+    /*
+    *@description : reading words file 
+    *$parameter : no parameter and this is for unsorted orderLinked list
+    */ 
     public static function readWords()
     {
-        $file="/home/admin1/Documents/Fellowship/DataStructure/files/words.txt";
+        $file="/home/admin1/Documents/Fellowship/Data/DataStructure/files/words.txt";
         $open=fopen($file,"r") or die("can't open the file");
         $word=fread($open,filesize($file));
         fclose($open);
         return $word;
     }
+
+    /*
+    *@description : reading numbers from  file 
+    *$parameter : no parameter and this is for Ordered linked list
+    */ 
     public static function readNumbers()
     {
-        $file="/home/admin1/Documents/Fellowship/DataStructure/files/numbers.txt";
+        $file="/home/admin1/Documents/Fellowship/Data/DataStructure/files/numbers.txt";
         $open=fopen($file,"r") or die("can't open the file");
         $word=fread($open,filesize($file));
         fclose($open);
         return $word;
     }
+
+    /*
+    *@description : finding the year is leap year or not 
+    *$parameter : parameter is year
+    *@return : boolean
+    */ 
     static function leapYear($n)
     {
         if(strlen((string)$n)==4){
-            if(($n%4==0)&&($n%100!=0)||($n%400==0)){
+            if(($n%4==0)&&($n%100!=0)||($n%400==0))
                 return true;
-            }
-            else{
-                return false;
-            }
         }
-        else{
-            return false;
-        }
+        return false;
     }
         
+    /*
+    *@description : getting the day of the date 
+    *$parameter : parameters are year month and date
+    @return : integer
+    */ 
     static function printDay($d,$m,$y)
     {
         $y0 = $y - (int)((14 - $m) / 12);
@@ -40,7 +63,11 @@ class Utility{
         return $d0;
     }
         
-        
+    /*
+    *@description : getting the value 
+    *$parameter : no parameter
+    @return : integer
+    */ 
     static public function getInt() 
     {
         fscanf(STDIN,"%d\n",$n);
@@ -51,6 +78,11 @@ class Utility{
         return $n;
     }
 
+    /*
+    *@description : generating the prime values for 0-1000 
+    *$parameter : no parameters
+    @return : returning the 2Darray which consists of only prime numbers
+    */ 
     public static function primeRange()
     {
         $array=array(array());
@@ -72,6 +104,12 @@ class Utility{
         }
         return $array;
     }
+
+    /*
+    *@description : generating the prime values for 0-1000 
+    *$parameter : no parameters
+    @return : returning the 1Darray which consists of only prime numbers
+    */ 
     public static function primeRange1()
     {
         $array=array();
@@ -129,6 +167,11 @@ class Utility{
         echo implode(" ", $primeNotAnagram),"\n\n";
     }
 
+    /*
+    *@description : generating the prime anagrams for 0-1000 
+    *$parameter : array is the parameter in that array only prime numbers
+    @return : returning the 1Darray which consists of only prime Anagrams
+    */ 
     public static function primeAnagram($array)
     {
         $c=0;
@@ -148,9 +191,14 @@ class Utility{
                 }
             }
         }
-        echo "\n\n";
         return $primePal;
     }
+
+    /*
+    *@description : reading the numbers from a file and this is for hashing function program 
+    *$parameter : no parameters
+    @return : returns the array which consists of numbers which are exist in readed file
+    */ 
     public static function readHashNumbers()
     {
         $file="/home/admin1/Documents/Fellowship/Data/DataStructure/files/hashingNumbers.txt";
@@ -158,6 +206,82 @@ class Utility{
         $word=fread($open,filesize($file));
         fclose($open);
         return $word;
+    }
+
+    /*
+    *@description : creating a new node and linking to next Linked List 
+    */ 
+    function insert($data)
+    {
+        $newNode=new ListNode($data);
+        $newNode->next=$this->firstNode;
+        $this->firstNode=&$newNode;
+    }
+
+    /*
+    *@description : deleting a node from a linked list 
+    *@parameter : parameter is data  
+    */ 
+    function delete($data)
+    {
+        $current = $this->firstNode;
+        $previous = $this->firstNode;
+        while($current->data != $data){
+            if($current->next == NULL)
+                return NULL;
+            else{
+                $previous = $current;
+                $current = $current->next;
+            }
+        }
+        if($current == $this->firstNode){
+            $this->firstNode = $this->firstNode->next;
+        }
+        else{
+            if($this->lastNode == $current)
+                $this->lastNode = $previous;
+                $previous->next = $current->next;
+        }
+    }
+
+    /*
+    *@description : searching a data weatheer the data is exist or not if it is exist adding else deleting that node
+    *@parameter : parameter is data  
+    */ 
+    function search($data)
+    {
+        $bool=true;
+        $ta=$this->firstNode;
+        while($ta != null){
+           
+            if($ta->data == $data){
+                Utility::delete($data);
+                echo "deleted $data\n";
+                $bool=false;
+                break;
+            }
+            else
+                $ta=$ta->next;
+        }
+        if($bool){
+            Utility::insert($data);
+            $open=fopen("/home/admin1/Documents/Fellowship/Data/DataStructure/files/words.txt","a") or die("can't open the file");
+            fwrite($open,$data."  ");
+            echo "$data added\n";
+        }
+    }
+
+    /*
+    *@description : displaying the linked list  
+    */ 
+    function display()
+    {
+        $ta=$this->firstNode;
+        while($ta != null){
+            echo $ta->data," ";
+            $ta=$ta->next;
+        }
+        echo "\n\n";
     }
 }
 ?>

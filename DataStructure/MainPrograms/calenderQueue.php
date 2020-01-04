@@ -11,11 +11,11 @@
 * @since : 24-12-2019
 *********************************************************************/
 include "/home/admin1/Documents/Fellowship/Data/DataStructure/Utility/utility.php";
-include "/home/admin1/Documents/Fellowship/Data/DataStructure/MainPrograms/queue.php";
+include "/home/admin1/Documents/Fellowship/Data/DataStructure/BusinessLogic/businessLogic.php";
 function calender($month,$year)
  {
-     $obj=new Queu();
-     $objWeek=new Queu();
+     $obj=new BusinessLogic();
+     $objWeek=new BusinessLogic();
     $days = array("S"," M"," T"," W"," Th "," F"," S");
     $daysInmonth = array(31,28,31,30,31,30,31,31,30,31,30,31);
     if (Utility::leapYear($year)) {
@@ -34,7 +34,7 @@ function calender($month,$year)
         $objWeek->enqueue($days[$i]);
     }
     $objWeek->show();
-    $obj->show();
+    $obj->calnederShow();
 }
 
  echo "enter month: ";

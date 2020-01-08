@@ -1,19 +1,39 @@
 {
-    "stock": [
+    "inventory": [
         {
-            "name": "c",
+            "name": "rice",
             "weight": "1",
             "priceOfWeight": 100
         },
         {
-            "name": "a",
-            "weight": "2",
-            "priceOfWeight": 200
+            "name": "rice",
+            "weight": "1",
+            "priceOfWeight": 100
         },
         {
-            "name": "1",
-            "weight": "2",
-            "priceOfWeight": 200
+            "name": "rice",
+            "weight": "1",
+            "priceOfWeight": 100
+        },
+        {
+            "name": "rice",
+            "weight": "1",
+            "priceOfWeight": 100
+        },
+        {
+            "name": "rice",
+            "weight": "1",
+            "priceOfWeight": 100
+        },
+        {
+            "name": "rice",
+            "weight": "",
+            "priceOfWeight": 0
+        },
+        {
+            "name": "rice",
+            "weight": "1",
+            "priceOfWeight": 100
         }
     ]
 }

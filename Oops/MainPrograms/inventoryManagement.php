@@ -32,10 +32,13 @@ function portfolio($portfolio)
 function printReport($portfolio)
 {
     $total=0;
+    $i=0;
     foreach($portfolio as $key){
-        echo $key->name,"   ",$key->quantity,"   ",$key->price,"    ",$key->quantity*$key->price,"\n";
+        echo $portfolio[$i]->name,"   ",$portfolio[$i]->quantity,"   ",$portfolio[$i]->price,"    ",$key->quantity*$key->price,"\n";
         $total +=$key->quantity*$key->price;
+        $i++;
     }
+    echo "total value of stock : $total";
 }
 function newPort()
 {

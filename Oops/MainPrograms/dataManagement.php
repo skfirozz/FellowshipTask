@@ -32,16 +32,17 @@ function Data($select)
             array_push($item, $array);
         break;
         default:
-        echo "invalid selection"; 
+        echo "EXIT"; 
     break;
     }
 }
 
 function saveData($item)
 {
-    $json['inventory']=$item;
+    $json1['inventory']=$item;
+    // $json1['inv']=$item;
     $fp=fopen("/home/admin1/Documents/Fellowship/Oops/JsonFiles/datamanagement.json",'w');
-    fwrite($fp,json_encode($json));
+    fwrite($fp,json_encode($json1));
     fclose($fp);
 }
 function getJson()
@@ -61,6 +62,7 @@ while($n< 4){
     Data($n);
 }
 saveData($item);
+// saveData1($item);
 // getJson();
 
 ?>

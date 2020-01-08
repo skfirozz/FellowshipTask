@@ -22,10 +22,10 @@ class Utility
     public static function numberValidation()
     {
   
-        $number = readline();
-        if (preg_match("/^[0-9\-\']+$/", $number))
-            return $number;
-        else 
-            Utility::numberValidation();
+       fscanf(STDIN,"%d\n",$n);
+       while(!is_numeric($n)){
+           fscanf(STDIN,"%d\n",$n);
+       }
+    return $n;
     }
 }

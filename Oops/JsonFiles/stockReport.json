@@ -1,0 +1,16 @@
+{
+    "stock": [
+        {
+            "StockName": "a",
+            "noOfStocks": "1",
+            "price": "1",
+            "total": 1
+        },
+        {
+            "StockName": null,
+            "noOfStocks": "2",
+            "price": "3",
+            "total": 6
+        }
+    ]
+}

@@ -1,0 +1,53 @@
+{
+    "rice":[
+        {
+            "name": "c",
+            "weight": "1",
+            "priceOfWeight": 100
+        },
+        {
+            "name": "a",
+            "weight": "2",
+            "priceOfWeight": 200
+        },
+        {
+            "name": "1",
+            "weight": "2",
+            "priceOfWeight": 200
+        }    
+    ],
+    "wheat":[
+        {
+            "name": "corn",
+            "weight": "1",
+            "priceOfWeight": 100
+        },
+        {
+            "name": "cr",
+            "weight": "2",
+            "priceOfWeight": 200
+        },
+        {
+            "name": "ima",
+            "weight": "2",
+            "priceOfWeight": 200
+        }
+    ],
+    "paulse":[
+        {
+            "name": "chana",
+            "weight": "1",
+            "priceOfWeight": 100
+        },
+        {
+            "name": "moong",
+            "weight": "2",
+            "priceOfWeight": 200
+        },
+        {
+            "name": "daal",
+            "weight": "2",
+            "priceOfWeight": 200
+        }
+    ]
+}

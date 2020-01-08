@@ -1,0 +1,19 @@
+{
+    "stock": [
+        {
+            "name": "c",
+            "weight": "1",
+            "priceOfWeight": 100
+        },
+        {
+            "name": "a",
+            "weight": "2",
+            "priceOfWeight": 200
+        },
+        {
+            "name": "1",
+            "weight": "2",
+            "priceOfWeight": 200
+        }
+    ]
+}

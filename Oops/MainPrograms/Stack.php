@@ -23,6 +23,44 @@ class Stack{
             }
         }
     }
+    function pop()
+    {
+        $ta=$this->firstNode;
+        $ba=$ta;
+        if($this->firstNode == null )
+        {
+            return;
+        }
+        else if($ta->next == null){
+            echo $ta->data," ";
+            $this->firstNode=null;
+        }
+        else{    
+            while($ta->next != null){
+                $ba=$ta;
+                $ta=$ta->next;
+            }
+            if($ta->next == null ){
+                echo $ta->data," ";
+                $ba->next=null;
+            }
+        }
+    }
+    function peek()
+    {
+        if($this->firstNode==null){
+        return false;
+        }
+        else{
+            $ta=$this->firstNode;
+            while($ta->next != null){
+                $ta=$ta->next;
+            }
+            echo "peek data",$ta->data,"\n";
+            return true;
+        }
+    }
+    
     function display()
     {
         $ta=$this->firstNode;

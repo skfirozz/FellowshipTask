@@ -40,7 +40,6 @@ function Data($select)
 function saveData($item)
 {
     $json1['inventory']=$item;
-    // $json1['inv']=$item;
     $fp=fopen("/home/admin1/Documents/Fellowship/Oops/JsonFiles/datamanagement.json",'w');
     fwrite($fp,json_encode($json1));
     fclose($fp);
@@ -52,8 +51,6 @@ function getJson()
     fclose($fp);
    echo $str,"\n\n";
 }
-
-
 $item=array();
 $n=0;
 while($n< 4){
@@ -62,7 +59,6 @@ while($n< 4){
     Data($n);
 }
 saveData($item);
-// saveData1($item);
-// getJson();
+
 
 ?>

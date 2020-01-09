@@ -1,13 +1,13 @@
 <?php
 include "/home/admin1/Documents/Fellowship/Oops/MainPrograms/node.php";
-class LinkedList{
+class Stack{
     public $firstNode;
    public function __construct()
     {
         $this->firstNode =NULL;
        
     }
-    function adding($data)
+    function push($data)
     {
         $newNode=new ListNode($data);
         if($this->firstNode==null)

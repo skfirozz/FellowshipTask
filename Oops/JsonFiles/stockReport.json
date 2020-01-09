@@ -1,16 +1,16 @@
 {
     "stock": [
         {
-            "StockName": "a",
-            "noOfStocks": "1",
-            "price": "1",
-            "total": 1
+            "StockName": "sha",
+            "noOfStocks": 10,
+            "price": 100,
+            "total": 1000
         },
         {
-            "StockName": null,
-            "noOfStocks": "2",
-            "price": "3",
-            "total": 6
+            "StockName": "hg",
+            "noOfStocks": 10,
+            "price": 20,
+            "total": 200
         }
     ]
 }

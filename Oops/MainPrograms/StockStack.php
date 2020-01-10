@@ -1,7 +1,7 @@
 <?php
-include '/home/admin1/Documents/Fellowship/Oops/Utility/utility.php';
-include '/home/admin1/Documents/Fellowship/Oops/MainPrograms/Stack.php';
-$array = json_decode(file_get_contents('/home/admin1/Documents/Fellowship/Oops/JsonFiles/stock.json'));
+include '/home/admin1/Documents/Fellowship/OOps/Oops/Utility/utility.php';
+include '/home/admin1/Documents/Fellowship/OOps/Oops/MainPrograms/Stack.php';
+$array = json_decode(file_get_contents('/home/admin1/Documents/Fellowship/OOps/Oops/JsonFiles/stock.json'));
 $obj = new Stack();
 for ($i = 0; $i < count($array); $i++) {
     echo "stock name-", $array[$i]->name, ":\nenter  purchased or  sold: ";

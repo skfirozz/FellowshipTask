@@ -1,11 +1,10 @@
 <?php
-include "/home/admin1/Documents/Fellowship/Oops/MainPrograms/node.php";
+include '/home/admin1/Documents/Fellowship/OOps/Oops/MainPrograms/node.php';
 class Stack{
     public $firstNode;
    public function __construct()
     {
         $this->firstNode =NULL;
-       
     }
     function push($data)
     {

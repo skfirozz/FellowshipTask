@@ -1,1 +1,22 @@
-[{"name":"firoz","shares":10,"balance":49900},{"name":"akhilesh","shares":20,"balance":19900},{"name":"koti","shares":50,"balance":10000},{"name":"karim","shares":20,"balance":200000}]
+[
+    {
+        "name": "firoz",
+        "shares": 10,
+        "balance": 49900
+    },
+    {
+        "name": "akhilesh",
+        "shares": 20,
+        "balance": 19900
+    },
+    {
+        "name": "koti",
+        "shares": 50,
+        "balance": 10000
+    },
+    {
+        "name": "karim",
+        "shares": 20,
+        "balance": 200000
+    }
+]

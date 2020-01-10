@@ -1,0 +1,38 @@
+[
+    {
+        "firstName": "d",
+        "lastName": "df",
+        "address": "sa",
+        "city": "fasawdw",
+        "state": "fgdsf",
+        "zipcode": 20,
+        "phoneNumber": 520
+    },
+    {
+        "firstName": "dsg",
+        "lastName": "dfs",
+        "address": "dsf",
+        "city": "dfs",
+        "state": "dfs",
+        "zipcode": 20,
+        "phoneNumber": 11
+    },
+    {
+        "firstName": "dsf",
+        "lastName": "dgfd",
+        "address": "dfasdsd",
+        "city": "fdsddsg",
+        "state": "fdsfas",
+        "zipcode": 200,
+        "phoneNumber": 1000
+    },
+    {
+        "firstName": "fgdfg",
+        "lastName": "dfghdfg",
+        "address": "dfgdfzd",
+        "city": "dsfdfg",
+        "state": "hdghdxf",
+        "zipcode": 222,
+        "phoneNumber": 222
+    }
+]

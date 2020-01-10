@@ -1,36 +1,89 @@
 <?php
-include '/home/admin1/Documents/Fellowship/OOps/Oops/Utility/utility.php';
-function addNewData($number)
+include '/home/admin1/Documents/Fellowship/OOps/Oops/MainPrograms/AddressBook/Address.php';
+$obj=new Address();
+function OfferToSave($array)
 {
-    global $array;
-    for($i=0;$i<$number;$i++){
-        $tempArray=array();
-        echo "enter F:";
-        $tempArray['firstName']=Utility::nameValidation();
-        echo "enter L:";
-        $tempArray['lastName']=Utility::nameValidation();
-        echo "enter address: ";
-        $tempArray['address']=readline();
-        echo "enter city: ";
-        $tempArrayp['city']=Utility::nameValidation();
-        echo "enter state: ";
-        $tempArray['state']=Utility::nameValidation();
-        echo "enter zipcode: ";
-        $tempArray['zipCode']=Utility::getInt();
-        echo "enter phonenumber: ";
-        $tempArray['phoneNumber']=Utility::getInt();
-        array_push($array,$tempArray);
+    echo "enter new AddessBook file name:  ";
+    $filename=readline().".json";
+    file_put_contents($filename,json_encode($array));
+}
+
+
+function run($obj)
+{
+    echo "enter 1.add new person data\n 2.edit data\n 3.delete a person data\n4.sort by name\n5.sort by zipcode\n6.print all data\n7.create new address book\n8.open address book :  ";
+    $option=Utility::getInt();
+    switch($option){
+        case 1:
+            $array=array();
+            $newData=$obj->addNewData($array);
+            echo "enter the file name: ";
+            $filename=readline().".json";
+            $previousData=json_decode(file_get_contents(($filename)));
+            $currentData=array_merge($previousData,$newData);
+            file_put_contents($filename,json_encode($currentData));
+        break;
+        case 2:
+            echo "enter the file name: ";
+            $filename=readline().".json";
+            $updatedData=$obj->updateData($filename);
+            file_put_contents($filename,json_encode($updatedData));
+            
+        break;
+        case 3:
+            $obj->deletePersonData();
+        break;
+        case 4:
+            echo "enter the file name to sort: ";
+            $filename=$filename.".json";;
+            $array=json_decode(file_get_contents($filename));
+            $sortBy='zipCode';
+            $sortedArray=$obj->sortData($array,$sortBy);
+            file_put_contents($filename,json_encode($sortedArray));
+        break;
+        case 5:
+            echo "enter the file name to sort: ";
+            $filename=$filename.".json";
+            $array=json_decode(file_get_contents($filename));
+            $sortBy='firstName';
+            $sortedArray=$obj->sortData($array,$sortBy);
+            file_put_contents($filename,json_encode($sortedArray));
+        break;
+        case 6:
+            echo "enter file name to print data: ";
+            $filename=readline().".json";
+            $obj->printEntities($filename);
+        break;
+        case 7:
+            echo "enter new AddessBook file name:  ";
+            $filename=readline();
+            $array=array();
+            $filename=$filename.".json";
+            $newData=$obj->addNewData($array);
+            echo "do you want to save the file \n\t1.to save \t2.not to save: ";
+            $s=Utility::numberValidation();
+            if($s==1)
+            {
+                OfferToSave($newData);
+            }
+        case 8:
+            echo "enter the file name to chane file name:  ";
+            $filename=readline().".json";
+            
+            break;
+        break;
+        default:
+        echo "....EXIT....\n\n";
+    break;
     }
-    return $array;
 }
-$array=array();
-function run()
-{
-    echo "enter how many users data you want to add: ";
-    $number=Utility::getInt();
-    $arr=addNewData($number);
-    
+$n=1;
+while($n==1){
+run($obj);
+echo "\nenter 1 to continue: ";
+$n=readline();
+if($n != 1)
+break;
 }
-run();
 echo "\n\n";
 ?>

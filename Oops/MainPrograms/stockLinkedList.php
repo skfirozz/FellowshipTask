@@ -1,6 +1,6 @@
 <?php
-include "/home/admin1/Documents/Fellowship/Oops/MainPrograms/LinkedList.php";
-include "/home/admin1/Documents/Fellowship/Oops/Utility/utility.php";
+include "/home/admin1/Documents/Fellowship/OOps/Oops/MainPrograms/LinkedList.php";
+include "/home/admin1/Documents/Fellowship/OOps/Oops/Utility/utility.php";
 class Stock1{
     public $name;
     public $share;
@@ -75,7 +75,7 @@ function display($obj)
             echo $ta->data->price," \n";
             $ta=$ta->next;
         }
-        echo "\n\n";
+        echo "\n";
     }
 
 $object=new LinkedList();

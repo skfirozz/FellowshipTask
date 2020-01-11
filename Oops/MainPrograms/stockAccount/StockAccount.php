@@ -48,5 +48,7 @@ while($n==1){
     account();
     echo "enter 1 for more operations:  ";
     $n=readline();
+    if($n!=1)
+break;
 }
 ?>

@@ -1,5 +1,5 @@
 <?php
-include "/home/admin1/Documents/Fellowship/Oops/MainPrograms/node.php";
+include "/home/admin1/Documents/Fellowship/OOps/Oops/MainPrograms/node.php";
 class LinkedList{
     public $firstNode;
    public function __construct()

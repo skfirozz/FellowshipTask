@@ -8,14 +8,12 @@ function account()
     $option=Utility::getInt();
     switch($option){
         case 1:
-            echo "enter file name what you want: ";
-            $filename=readline();
+            $filename='users.json';
             $array=$stockObject->addUsersData();
             $stockObject->saveFile($filename,$array);
         break;
         case 2: 
-            ECHO "enter a file name what you want to create for shares";
-            $filename=readline();
+            $filename='shares.json';
             $array=$stockObject->addShares($filename);
             $stockObject->saveFile($filename,$array);
         break;

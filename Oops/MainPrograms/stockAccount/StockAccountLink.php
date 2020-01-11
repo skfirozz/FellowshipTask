@@ -79,9 +79,9 @@ class StockAccount{
     }
     static function saveFile($filename,$array)
     {
-        $fp=fopen($filename,'w');
-        fwrite($fp,json_encode($array));
-        fclose($fp);
+        $previousdata=json_decode(file_get_contents($filename));
+        $currentData=array_merge($previousdata,$array);
+        file_put_contents($filename,json_encode($currentData));
     }
     function sell($amount,$symbol)
     {

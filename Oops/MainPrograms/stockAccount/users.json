@@ -1,0 +1,17 @@
+[
+    {
+        "name": "df",
+        "shares": 22,
+        "balance": 2000
+    },
+    {
+        "name": "hhh",
+        "shares": 1000,
+        "balance": 9900
+    },
+    {
+        "name": "baaaa",
+        "shares": 10,
+        "balance": 200
+    }
+]

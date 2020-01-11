@@ -70,5 +70,14 @@
         "state": "fggd",
         "zipcode": 2,
         "phoneNumber": 20
+    },
+    {
+        "firstName": "naveen",
+        "lastName": "naveen",
+        "address": "karna",
+        "city": "mumbai",
+        "state": "mumbai",
+        "zipcode": 5221,
+        "phoneNumber": 300
     }
 ]

@@ -35,7 +35,7 @@ class Address{
             if($userData[$i]->firstName==$username ||$userData[$i]->firstName==$username){
                 $tempArray=array();
                 $tempArray['firstName']=$userData[$i]->firstName;
-                $tempArray['lastName']=$userData[$i]->firstName;
+                $tempArray['lastName']=$userData[$i]->lastName;
                 echo "enter address: ";
                 $tempArray['address']=readline();
                 echo "enter city: ";

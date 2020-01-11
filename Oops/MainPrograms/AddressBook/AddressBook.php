@@ -7,11 +7,9 @@ function OfferToSave($array)
     $filename=readline().".json";
     file_put_contents($filename,json_encode($array));
 }
-
-
 function run($obj)
 {
-    echo "enter 1.add new person data\n 2.edit data\n 3.delete a person data\n4.sort by name\n5.sort by zipcode\n6.print all data\n7.create new address book\n8.open address book :  ";
+    echo "enter 1.add new person data\n 2.edit data\n 3.delete a person data\n4.sort by name\n5.sort by zipcode\n6.print all data\n7.create new address book\n8.Open to address Book\n9.change the file name :  ";
     $option=Utility::getInt();
     switch($option){
         case 1:
@@ -66,11 +64,21 @@ function run($obj)
             {
                 OfferToSave($newData);
             }
+        break;
         case 8:
+            echo "enter fila name to open address book: ";
+            $filename=readline().".json";
+            $data=json_decode(file_get_contents($filename));
+            $obj->printEntities($filename);
+        break;
+        case 9:
             echo "enter the file name to chane file name:  ";
             $filename=readline().".json";
-            
+            echo "enter new file name: ";
+            $newFilename=readline().".json";
+            rename($filename,$newFilename);
             break;
+
         break;
         default:
         echo "....EXIT....\n\n";

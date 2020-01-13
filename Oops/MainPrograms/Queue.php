@@ -6,23 +6,25 @@ class Queue{
     {
         $this->firstNode=NULL;
     }
-    function queue($data)
+    function enqueue($data)
     {
-        echo $data,"   ";
-        $newNode=new ListNode($data);
-        if($this->firstNode==NULL)
-        $this->firstNode=&$newNode;
-        else{
-            
+            $newNode=new ListNode($data);
             $ta=$this->firstNode;
-            while($ta !=null){
-                if($ta->next=null){
-                    $ta->next=&$newNode;
-                break;
+            if($ta == null || $ta->data > $data ){
+                $newNode->next=$this->firstNode;
+                $this->firstNode=&$newNode;
             }
-                $ta=$ta->next;
+            else {
+                while ($ta->data < $data ){
+                    if( $ta->data < $data && $ta->next ==null || $ta->data < $data && $ta->next->data >= $data){
+                        $ba=$ta;
+                        $ba=$ta->next;
+                        $ta->next=$newNode;
+                        $newNode->next=$ba;
+                    }
+                    $ta=$ta->next;
+                }
             }
-        }
     }
     function deque()
     {

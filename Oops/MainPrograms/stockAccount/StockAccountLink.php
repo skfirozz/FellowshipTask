@@ -18,10 +18,6 @@ class StockAccount{
         }
     return $array;
     }
-    function balance()
-    {
-
-    }
     function addUsersData()
     {
         echo "enter number of users: ";
@@ -116,5 +112,4 @@ class StockAccount{
         StockAccount::saveFile($fileShare,$data);
     }
 }
-
 ?>

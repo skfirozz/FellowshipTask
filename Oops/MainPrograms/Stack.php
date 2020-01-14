@@ -19,7 +19,7 @@ class Stack{
     function push($data)
     {
         $newNode=new ListNode($data);
-        if($this->firstNode==null)
+        if($this->firstNode == null)
             $this->firstNode=&$newNode;
         else{
             $ta=$this->firstNode;

@@ -1,16 +1,12 @@
 <?php
-/********************************************************************
-* @Execution : Fellowship/OOps/Oops/MainPrograms/Clinique $ php SwitchCases.php
-* @description :Clinique Management operations
-* @Purpose : storing all in  JSON File
-* @function : Utility/utility
-* @file : SwitchCases.php
-* @author : skfirozz <shaikfiroz838@gmail.com>
-* @version : 7.2.24
-* @since : 11-01-2020
-*********************************************************************/
+
 class cases
 {
+    /*
+     *@description : this function is for searching the patient.
+     *$parameter : parameter is name of the patient if exist it will show patient data else no
+     *@returns : no return data
+     */
     public function searchPatient($search)
     {
         $bool = true;
@@ -29,6 +25,12 @@ class cases
             echo "\nno data found...\n";
         }
     }
+
+    /*
+     *@description : this function is for searching the doctor which is id, name, availabilty, speciality.
+     *$parameter : parameter is name of the doctor if exist it will show doctors data else no
+     *@returns : no return data
+     */
     public function searchDoctor($search)
     {
         $bool = true;
@@ -48,6 +50,11 @@ class cases
         }
     }
 
+    /*
+     *@description : this function is for searching the patient data using diifernt options.
+     *$parameter : parameter is name of the patient if exist it will show patient data else no
+     *@returns : no return type
+     */
     public function searchPatientCase()
     {
         echo "enter 1. with name\n2.ID\n3.mobileNumber\n4.Age :  ";
@@ -78,6 +85,11 @@ class cases
         }
     }
 
+    /*
+     *@description : this function is for searching the doctors data using diifernt options.
+     *$parameter : parameter is name of the doctor if exist it will show doctor data else no
+     *@returns : no return type
+     */
     public function searchDoctorCase()
     {
         echo "\nenter 1. with name\n2.ID\n3.Specialization\n4.Availability :  ";
@@ -107,18 +119,30 @@ class cases
                 echo "\nEXIT........\n";
         }
     }
+
+    /*
+     *@description : this function is for adding the new doctor data.
+     *$parameter : no parametes
+     *@returns : no return type
+     */
     public function addDoctor()
     {
         $previosData = json_decode(file_get_contents('doctor.json'));
-        $newData = addDoctorData();
+        $newData = Utility::addDoctorData();
         echo count($previosData);
         $data = array_merge($previosData, $newData);
         file_put_contents('doctor.json', json_encode($data));
     }
+
+    /*
+     *@description : this function is for adding the new new patient data.
+     *$parameter : no parametes
+     *@returns : no return type
+     */
     public function addPatient()
     {
         $previosData = json_decode(file_get_contents('patient.json'));
-        $newData = addPatients();
+        $newData = Utility::addPatients();
         echo count($previosData);
         $data = array_merge($previosData, $newData);
         file_put_contents('patient.json', json_encode($data));

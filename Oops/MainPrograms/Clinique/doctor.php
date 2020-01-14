@@ -9,46 +9,8 @@
 * @version : 7.2.24
 * @since : 11-01-2020
 *********************************************************************/
-include '/home/admin1/Documents/Fellowship/OOps/Oops/Utility/utility.php';
-include '/home/admin1/Documents/Fellowship/OOps/Oops/MainPrograms/Clinique/SwitchCases.php';
-function addDoctorData()
-{
-    $array = array();
-    echo "enter the nuumber of doctors you want to add: ";
-    $number = utility::getInt();
-    for ($i = 0; $i < $number; $i++) {
-        $tempArray = array();
-        echo "enter name of doctor: ";
-        $tempArray['Name'] = Utility::nameValidation();
-        echo "enter ID : ";
-        $tempArray['Id'] = Utility::getInt();
-        echo "enter Specialization : ";
-        $tempArray['Specialization'] = Utility::nameValidation();
-        echo "enter Availability: ";
-        $tempArray['Availability'] = Utility::nameValidation();
-        array_push($array, $tempArray);
-    }
-    return $array;
-}
-function addPatients()
-{
-    $array = array();
-    echo "enter the nuumber of patients you want to add: ";
-    $number = utility::getInt();
-    for ($i = 0; $i < $number; $i++) {
-        $tempArray = array();
-        echo "enter name of patient: ";
-        $tempArray['Name'] = Utility::nameValidation();
-        echo "enter ID : ";
-        $tempArray['Id'] = Utility::getInt();
-        echo "enter mobileNumber : ";
-        $tempArray['mobileNumber'] = Utility::getInt();
-        echo "enter Age: ";
-        $tempArray['Age'] = Utility::getInt();
-        array_push($array, $tempArray);
-    }
-    return $array;
-}
+include '/home/admin1/Documents/Fellowship/OOps/Oops/MainPrograms/Clinique/Utility.php';
+include '/home/admin1/Documents/Fellowship/OOps/Oops/MainPrograms/Clinique/BusinessLogic.php';
 
 function run()
 {

@@ -1,16 +1,10 @@
 <?php
-/********************************************************************
-* @Execution : Fellowship/OOps/Oops/MainPrograms/AddressBook $ php Address.php
-* @description :AddressBook operations
-* @Purpose : storing all in  JSON File
-* @function : Utility/utility
-* @file : Adddress.php
-* @author : skfirozz <shaikfiroz838@gmail.com>
-* @version : 7.2.24
-* @since : 11-01-2020
-*********************************************************************/
-include '/home/admin1/Documents/Fellowship/OOps/Oops/Utility/utility.php';
-class Address{
+class BusinessLogic{
+    /*
+     *@description : to storing the entered data in array and which array is again storing in main array
+     *$parameter : parameter is main array in that data is storing 
+     *@returns : return main array
+     */
     function addNewData($array)
     {
         echo "enter how many members data you want to add: ";
@@ -36,6 +30,11 @@ class Address{
     return $array;
     }
 
+    /*
+     *@description : this function is for updating the user data which is exist in file.
+     *$parameter : parameter is filename this will update the existing data in file  
+     *@returns : array which is updated array
+     */
     function updateData($filename)
     {
         echo "enter the user name: ";
@@ -62,6 +61,11 @@ class Address{
     return $userData;
     }
 
+    /*
+     *@description : this function is for sorting the content of array.
+     *$parameter : parameter is array and name is which one is need to sort   
+     *@returns : the return type is sorted array
+     */
     function sortData($array,$name)
     {
         for($i=0;$i<count($array);$i++){
@@ -76,6 +80,10 @@ class Address{
     return $array;
     }
 
+    /*
+     *@description : this function is for printing the data which is exist in file .
+     *$parameter : parameter is filename
+     */
     function printEntities($filename)
     {
         $array=json_decode(file_get_contents($filename));
@@ -90,6 +98,10 @@ class Address{
         }
     }
 
+     /*
+     *@description : this function is for deleting the person data which is exist in file, after deleting the persons data again remaining data is stored in file.
+     *$parameter : no parameter
+     */
     function deletePersonData()
     {
         echo "enter the person name you want to delete: ";

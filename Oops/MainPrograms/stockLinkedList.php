@@ -1,4 +1,16 @@
 <?php
+/********************************************************************
+* @Execution : Fellowship/OOps/Oops/MainPrograms $ php stockLinkedList.php
+* @description :Maintain the List of CompanyShares in a Linked List So new CompanyShares can
+    be added or removed easily. Do not use any Collection Library to implement Linked
+    List..
+* @Purpose : implement using LinkedList
+* @function : Utility/utility
+* @file : stockLinkedList.php
+* @author : skfirozz <shaikfiroz838@gmail.com>
+* @version : 7.2.24
+* @since : 11-01-2020
+*********************************************************************/
 include "/home/admin1/Documents/Fellowship/OOps/Oops/MainPrograms/LinkedList.php";
 include "/home/admin1/Documents/Fellowship/OOps/Oops/Utility/utility.php";
 class Stock1{

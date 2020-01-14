@@ -1,4 +1,15 @@
 <?php
+/********************************************************************
+* @Execution : Fellowship/OOps/Oops/MainPrograms $ php dataManagement.php
+* @description :Create a JSON file having Inventory Details for Rice, Pulses and Wheats
+                with properties name, weight, price per kg.
+* @Purpose : read in JSON File
+* @function : Utility/utility
+* @file : dataManagement.php
+* @author : skfirozz <shaikfiroz838@gmail.com>
+* @version : 7.2.24
+* @since : 11-01-2020
+*********************************************************************/
 function Data($select)
 {
     global $item;

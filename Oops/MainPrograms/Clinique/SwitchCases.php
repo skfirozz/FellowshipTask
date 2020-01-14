@@ -1,7 +1,16 @@
 <?php
+/********************************************************************
+* @Execution : Fellowship/OOps/Oops/MainPrograms/Clinique $ php SwitchCases.php
+* @description :Clinique Management operations
+* @Purpose : storing all in  JSON File
+* @function : Utility/utility
+* @file : SwitchCases.php
+* @author : skfirozz <shaikfiroz838@gmail.com>
+* @version : 7.2.24
+* @since : 11-01-2020
+*********************************************************************/
 class cases
 {
-
     public function searchPatient($search)
     {
         $bool = true;

@@ -1,4 +1,14 @@
 <?php
+/********************************************************************
+* @Execution : Fellowship/OOps/Oops/MainPrograms/Clinique $ php doctor.php
+* @description :Clinique Management operations
+* @Purpose : storing all in  JSON File
+* @function : Utility/utility
+* @file : doctor.php
+* @author : skfirozz <shaikfiroz838@gmail.com>
+* @version : 7.2.24
+* @since : 11-01-2020
+*********************************************************************/
 include '/home/admin1/Documents/Fellowship/OOps/Oops/Utility/utility.php';
 include '/home/admin1/Documents/Fellowship/OOps/Oops/MainPrograms/Clinique/SwitchCases.php';
 function addDoctorData()

@@ -1,4 +1,18 @@
 <?php
+/********************************************************************
+* @Execution : Fellowship/OOps/Oops/MainPrograms $ php inventoryManagement.php
+* @description :Extend the above program to Create InventoryManager to manage the
+    Inventory. The Inventory Manager will use InventoryFactory to create Inventory
+    Object from JSON. The InventoryManager will call each Inventory Object in its list
+    to calculate the Inventory Price and then call the Inventory Object to return the
+    JSON String. The main program will be with InventoryManager
+* @Purpose : Create the JSON from Inventory Object and output the JSON String.
+* @function : Utility/utility
+* @file : inventoryManagement.php
+* @author : skfirozz <shaikfiroz838@gmail.com>
+* @version : 7.2.24
+* @since : 11-01-2020
+*********************************************************************/
 include "/home/admin1/Documents/Fellowship/Oops/Utility/utility.php";
 class Stock{
     public $name;

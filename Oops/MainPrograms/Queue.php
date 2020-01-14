@@ -1,4 +1,14 @@
 <?php
+/********************************************************************
+* @Execution : Fellowship/OOps/Oops/MainPrograms $ php Queue.php
+* @description :Queue implementation
+* @Purpose : this Queue is sorted Queue
+* @function : Utility/utility
+* @file : Queue.php
+* @author : skfirozz <shaikfiroz838@gmail.com>
+* @version : 7.2.24
+* @since : 11-01-2020
+*********************************************************************/
 include '/home/admin1/Documents/Fellowship/OOps/Oops/MainPrograms/node.php';
 class Queue{
     public $firstNode;

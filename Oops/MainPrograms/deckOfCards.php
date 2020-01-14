@@ -1,4 +1,18 @@
 <?php
+/********************************************************************
+* @Execution : Fellowship/OOps/Oops/MainPrograms $ php deckOfCards.php
+* @description :Write a Program DeckOfCards.php , to initialize deck of cards having suit ("Clubs",
+    "Diamonds", "Hearts", "Spades") & Rank ("2", "3", "4", "5", "6", "7", "8", "9", "10",
+    "Jack", "Queen", "King", "Ace"). Shuffle the cards using Random method and then
+    distribute 9 Cards to 4 Players and Print the Cards the received by the 4 Players
+    using 2D Array
+* @Purpose : displaying who got which cards 
+* @function : Utility/utility
+* @file : deckOfCards.php
+* @author : skfirozz <shaikfiroz838@gmail.com>
+* @version : 7.2.24
+* @since : 11-01-2020
+*********************************************************************/
 function check($cards,$player)
 {
     global $player;

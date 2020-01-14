@@ -1,4 +1,14 @@
 <?php
+/********************************************************************
+* @Execution : Fellowship/OOps/Oops/MainPrograms $ php LinkedList.php
+* @description :implementing the linkedlist 
+* @Purpose : for some programs implemted this linked list
+* @function : Utility/utility
+* @file : LinkedList.php
+* @author : skfirozz <shaikfiroz838@gmail.com>
+* @version : 7.2.24
+* @since : 11-01-2020
+*********************************************************************/
 include "/home/admin1/Documents/Fellowship/OOps/Oops/MainPrograms/node.php";
 class LinkedList{
     public $firstNode;

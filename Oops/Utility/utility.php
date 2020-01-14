@@ -1,6 +1,11 @@
 <?php
 class Utility
 {
+    /*
+    *@description : validating the word is string with out numbers without spaces
+    *$parameter : no parameters
+    *$return : returns the word if it is valid
+    */
     public static function nameValidation()
     {
        
@@ -10,6 +15,12 @@ class Utility
         else 
             Utility::nameValidation();
     }
+
+    /*
+    *@description : validating the input is only characters
+    *$parameter : no parameters
+    *$return : returns the input if it valid
+    */
     public static function fullNameValidation()
     {
       
@@ -19,6 +30,12 @@ class Utility
         else 
             Utility::fullNameValidation();
     }
+
+    /*
+    *@description : validating the input is integer or not
+    *$parameter : no parameter
+    *$return : returns the integer value
+    */
     public static function numberValidation()
     {
   
@@ -28,6 +45,12 @@ class Utility
        }
     return $n;
     }
+
+    /*
+    *@description : validating the input is integer or not
+    *$parameter : no parameter
+    *$return : returns the integer value
+    */
     public static function getInt()
     {
         fscanf(STDIN, "%d\n", $n);

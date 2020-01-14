@@ -1,0 +1,20 @@
+[
+    {
+        "StockName": "dgfdfs",
+        "noOfStocks": 2000,
+        "price": 200,
+        "total": 400000
+    },
+    {
+        "StockName": "dfsg",
+        "noOfStocks": 200,
+        "price": 200,
+        "total": 40000
+    },
+    {
+        "StockName": "gfsd",
+        "noOfStocks": 200,
+        "price": 200,
+        "total": 40000
+    }
+]

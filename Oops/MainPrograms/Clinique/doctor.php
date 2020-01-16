@@ -14,7 +14,7 @@ include '/home/admin1/Documents/Fellowship/OOps/Oops/MainPrograms/Clinique/Busin
 
 function run()
 {
-    $obj = new cases();
+    $obj = new BusinessLogic();
     echo "enter\n1.Add Doctor Data\n2.Add Patient Data\n3.Search Patient\n4.Search Doctor\n";
     $n = Utility::getInt();
     switch ($n) {

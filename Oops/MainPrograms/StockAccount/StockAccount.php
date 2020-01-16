@@ -1,9 +1,9 @@
 <?php
-include "/home/admin1/Documents/Fellowship/OOps/Oops/Utility/utility.php";
-include '/home/admin1/Documents/Fellowship/OOps/Oops/MainPrograms/stockAccount/StockAccountLink.php';
+include '/home/admin1/Documents/Fellowship/OOps/Oops/MainPrograms/StockAccount/utility.php';
+include '/home/admin1/Documents/Fellowship/OOps/Oops/MainPrograms/StockAccount/StockAccount.php';
 function account()
 {
-    $stockObject=new StockAccount();
+    $stockObject=new BusinessLogic();
     echo "enter \n1.add users data\n2.add shares data\n3.buy or sell shares \n4.EXIT\nenter a option:  ";
     $option=Utility::getInt();
     switch($option){

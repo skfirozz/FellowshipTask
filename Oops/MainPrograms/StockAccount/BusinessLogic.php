@@ -1,5 +1,5 @@
 <?php
-class StockAccount{
+class BusinessLogic{
     function addShares($filename)
     {
         echo "enter the number of stocks you want to add: ";
@@ -108,8 +108,8 @@ class StockAccount{
             echo "$symbol is not exist in $fileShare.......\n\n"; 
         }
         else echo "not found file name..";
-        StockAccount::saveFile($fileUser,$userData);
-        StockAccount::saveFile($fileShare,$data);
+        BusinessLogic::saveFile($fileUser,$userData);
+        BusinessLogic::saveFile($fileShare,$data);
     }
 }
 ?>

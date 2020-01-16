@@ -1,6 +1,6 @@
 <?php
 
-class cases
+class BusinessLogic
 {
     /*
      *@description : this function is for searching the patient.
@@ -63,22 +63,22 @@ class cases
             case 1:
                 echo "enter Name : ";
                 $name = Utility::nameValidation();
-                cases::searchPatient($name);
+                BusinessLogic::searchPatient($name);
                 break;
             case 2:
                 echo "enter ID : ";
                 $name = Utility::getInt();
-                cases::searchPatient($name);
+                BusinessLogic::searchPatient($name);
                 break;
             case 3:
                 echo "enter mobile Number : ";
                 $name = Utility::getInt();
-                cases::searchPatient($name);
+                BusinessLogic::searchPatient($name);
                 break;
             case 4:
                 echo "enter Age : ";
                 $name = Utility::getInt();
-                cases::searchPatient($name);
+                BusinessLogic::searchPatient($name);
                 break;
             default:
                 echo "\nEXIT........\n";
@@ -98,22 +98,22 @@ class cases
             case 1:
                 echo "enter name: ";
                 $name = Utility::nameValidation();
-                cases::searchDoctor($name);
+                BusinessLogic::searchDoctor($name);
                 break;
             case 2:
                 echo "enter name: ";
                 $name = Utility::getInt();
-                cases::searchDoctor($name);
+                BusinessLogic::searchDoctor($name);
                 break;
             case 3:
                 echo "enter Specialization: ";
                 $name = Utility::nameValidation();
-                cases::searchDoctor($name);
+                BusinessLogic::searchDoctor($name);
                 break;
             case 4:
                 echo "enter Availability : ";
                 $name = Utility::nameValidation();
-                cases::searchDoctor($name);
+                BusinessLogic::searchDoctor($name);
                 break;
             default:
                 echo "\nEXIT........\n";

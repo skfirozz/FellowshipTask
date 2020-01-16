@@ -1,8 +1,8 @@
 <?php
-include '/home/admin1/Documents/Fellowship/Design Patterns/DesignPatterns/Utility/utility.php';
-include '/home/admin1/Documents/Fellowship/Design Patterns/DesignPatterns/MainPrograms/Creational/functionalDesign/pc.php';
-include '/home/admin1/Documents/Fellowship/Design Patterns/DesignPatterns/MainPrograms/Creational/functionalDesign/laptop.php';
-include '/home/admin1/Documents/Fellowship/Design Patterns/DesignPatterns/MainPrograms/Creational/functionalDesign/server.php';
+include '/home/admin1/Documents/Fellowship/Design Patterns/DesignPatterns/MainPrograms/Creational/FactoryPattern/utility.php';
+include '/home/admin1/Documents/Fellowship/Design Patterns/DesignPatterns/MainPrograms/Creational/FactoryPattern/pc.php';
+include '/home/admin1/Documents/Fellowship/Design Patterns/DesignPatterns/MainPrograms/Creational/FactoryPattern/laptop.php';
+include '/home/admin1/Documents/Fellowship/Design Patterns/DesignPatterns/MainPrograms/Creational/FactoryPattern/server.php';
 class ComputerFactory
 {
     public function getInfo($n)

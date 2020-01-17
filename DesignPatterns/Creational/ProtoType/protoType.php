@@ -1,46 +1,49 @@
 <?php
-class BookProtoType{
+class BookProtoType
+{
     protected $title;
     protected $topic;
-    function getTitle()
+    public function getTitle()
     {
         return $this->title;
     }
-    function setTitle($titleIn)
+    public function setTitle($titleIn)
     {
-        return $this->title=$titleIn;
+        return $this->title = $titleIn;
     }
-    function getTopic()
+    public function getTopic()
     {
         return $this->topic;
     }
 }
-class PhpBookProtoType extends BookProtoType{
-    function __construct(){
-        $this->topic='PHP';
+class PhpBookProtoType extends BookProtoType
+{
+    public function __construct()
+    {
+        $this->topic = 'PHP';
     }
 }
-class DesignPatternBookProtoType extends BookProtoType{
-    function __construct()
+class DesignPatternBookProtoType extends BookProtoType
+{
+    public function __construct()
     {
-        $this->topic='DesignPatterns';  
+        $this->topic = 'DesignPatterns';
     }
 }
 
 echo "Begin\n";
-$phpProto=new BookProtoType();
-$designProto=new DesignPatternBookProtoType();
-$bookOne=clone $designProto;
+$phpProto = new BookProtoType();
+$designProto = new DesignPatternBookProtoType();
+$bookOne = clone $designProto;
 $bookOne->setTitle('PHP');
-echo "BookOne Topic: ".$bookOne->getTopic(),"\n";
-echo "BookOne Title: ".$bookOne->getTitle(),"\n";
-$bookTwo=clone $designProto;
+echo "BookOne Topic: " . $bookOne->getTopic(), "\n";
+echo "BookOne Title: " . $bookOne->getTitle(), "\n";
+$bookTwo = clone $designProto;
 $bookTwo->setTitle('Wings Of Fire');
-echo "BookTwo Topic: ".$bookTwo->getTopic(),"\n";
-echo "BookTwo Title: ".$bookTwo->getTitle(),"\n";
+echo "BookTwo Topic: " . $bookTwo->getTopic(), "\n";
+echo "BookTwo Title: " . $bookTwo->getTitle(), "\n";
 
-$bookThree=clone $designProto;
+$bookThree = clone $designProto;
 $bookThree->setTitle('My Attitude');
-echo "BookTwo Topic: ".$bookThree->getTopic(),"\n";
-echo "BookTwo Title: ".$bookThree->getTitle(),"\n";
-?>
+echo "BookTwo Topic: " . $bookThree->getTopic(), "\n";
+echo "BookTwo Title: " . $bookThree->getTitle(), "\n";

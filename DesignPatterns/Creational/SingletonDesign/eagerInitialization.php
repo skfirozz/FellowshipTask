@@ -1,14 +1,14 @@
 <?php
 class EagerInitialization{
     
+    public static $obj=new EagerInitialization();
     private function __construct()
     {
     }
-    // private static $obj=new EagerInitialization();
+    
     public static function  getInstance()
     {
-        
-        // return $obj;
+        return $obj;
     }
 }
 ?>

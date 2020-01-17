@@ -1,26 +1,31 @@
 <?php
-class PC{
+class PC
+{
     public $brand;
     public $ram;
     public $harddisk;
     public $windows;
-    public function PC($brand,$ram,$harddisk,$windows)
+    public function PC($brand, $ram, $harddisk, $windows)
     {
-        $this->brand=$brand;
-        $this->ram=$ram;
-        $this->harddisk=$harddisk;
-        $this->windows=$windows;
+        $this->brand = $brand;
+        $this->ram = $ram;
+        $this->harddisk = $harddisk;
+        $this->windows = $windows;
     }
-    public function brand(){
+    public function brand()
+    {
         return $this->brand;
     }
-    public function ram(){
+    public function ram()
+    {
         return $this->ram;
     }
-    public function harddisk(){
+    public function harddisk()
+    {
         return $this->harddisk;
     }
-    public function windows(){
+    public function windows()
+    {
         return $this->windows;
     }
 }

@@ -9,7 +9,6 @@ class VegMenu
 }
 class NonVegMenU
 {
-
 }
 class VegAndNonVeg
 {

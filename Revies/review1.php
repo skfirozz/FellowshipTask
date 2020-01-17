@@ -1,4 +1,10 @@
 <?php
+/*
+write a program to re-arrange array in alternating position and negative numbers
+@input>>>{1,2,3,-4,-1,4}
+@output>>{-4,1,-1,2,3,4}
+*/
+
 function minusValues($array)
 {
     $minusArray=array();

@@ -1,4 +1,13 @@
 <?php
+/********************************************************************
+* @Execution : Fellowship/DesignPatterns/DesignPatterns/Creational/ProtoType $ php protoType.php
+* @description :protoType design pattern in Creational
+* @Purpose : Proto Type design Pattern in Creational
+* @file : protoType.php
+* @author : skfirozz <shaikfiroz838@gmail.com>
+* @version : 7.2.24
+* @since : 18-01-2020
+*********************************************************************/
 class BookProtoType
 {
     protected $title;

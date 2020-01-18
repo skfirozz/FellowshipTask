@@ -1,5 +1,6 @@
 <?php
-class Book{
+require_once 'Item.php';
+class Book implements ItemElement{
     private $name;
     private $price;
     private $quantity;
@@ -17,6 +18,10 @@ class Book{
     }
     public function getQuantity(){
         return $this->quantity;
+    }
+    public function accept(cartVisitor $visitor)
+    {
+        $visitor->visitBook($this);
     }
 }
 ?>

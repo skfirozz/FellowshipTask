@@ -1,4 +1,13 @@
 <?php
+/********************************************************************
+* @Execution : Fellowship/DesignPatterns/DesignPatterns/Creational/FactoryPattern $ php computerFactory.php
+* @description :Factory design pattern in Creational
+* @Purpose : Factory design Pattern in Creational
+* @file : computerFactory.php
+* @author : skfirozz <shaikfiroz838@gmail.com>
+* @version : 7.2.24
+* @since : 18-01-2020
+*********************************************************************/
 include '/home/admin1/Documents/Fellowship/Design Patterns/DesignPatterns/MainPrograms/Creational/FactoryPattern/utility.php';
 include '/home/admin1/Documents/Fellowship/Design Patterns/DesignPatterns/MainPrograms/Creational/FactoryPattern/pc.php';
 include '/home/admin1/Documents/Fellowship/Design Patterns/DesignPatterns/MainPrograms/Creational/FactoryPattern/laptop.php';

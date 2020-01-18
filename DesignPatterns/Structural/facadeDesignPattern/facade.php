@@ -1,4 +1,13 @@
 <?php
+/********************************************************************
+* @Execution : Fellowship/DesignPatterns/DesignPatterns/Structural/facade $ php facade.php
+* @description :facade design pattern in Structural
+* @Purpose : facade design Pattern in Structural
+* @file : facade.php
+* @author : skfirozz <shaikfiroz838@gmail.com>
+* @version : 7.2.24
+* @since : 18-01-2020
+*********************************************************************/
 interface Hotel
 {
     public function getMenu();

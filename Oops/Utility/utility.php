@@ -2,55 +2,59 @@
 class Utility
 {
     /*
-    *@description : validating the word is string with out numbers without spaces
-    *$parameter : no parameters
-    *$return : returns the word if it is valid
-    */
+     *@description : validating the word is string with out numbers without spaces
+     *$parameter : no parameters
+     *$return : returns the word if it is valid
+     */
     public static function nameValidation()
     {
-       
+
         $name = readline();
-        if (preg_match("/^[a-zA-Z\-\']+$/", $name))
+        if (preg_match("/^[a-zA-Z\-\']+$/", $name)){
             return $name;
-        else 
+        } else {
+            echo "enter again: ";
             Utility::nameValidation();
+        }
     }
 
     /*
-    *@description : validating the input is only characters
-    *$parameter : no parameters
-    *$return : returns the input if it valid
-    */
+     *@description : validating the input is only characters
+     *$parameter : no parameters
+     *$return : returns the input if it valid
+     */
     public static function fullNameValidation()
     {
-      
         $fName = readline();
-        if (preg_match("/^[a-zA-Z\- \']+$/", $fName))
+        if (preg_match("/^[a-zA-Z\- \']+$/", $fName)) {
             return $fName;
-        else 
+        } else {
+            echo "enter in characters: ";
             Utility::fullNameValidation();
+
+        }
     }
 
     /*
-    *@description : validating the input is integer or not
-    *$parameter : no parameter
-    *$return : returns the integer value
-    */
+     *@description : validating the input is integer or not
+     *$parameter : no parameter
+     *$return : returns the integer value
+     */
     public static function numberValidation()
     {
-  
-       fscanf(STDIN,"%d\n",$n);
-       while(!is_numeric($n)){
-           fscanf(STDIN,"%d\n",$n);
-       }
-    return $n;
+
+        fscanf(STDIN, "%d\n", $n);
+        while (!is_numeric($n)) {
+            fscanf(STDIN, "%d\n", $n);
+        }
+        return $n;
     }
 
     /*
-    *@description : validating the input is integer or not
-    *$parameter : no parameter
-    *$return : returns the integer value
-    */
+     *@description : validating the input is integer or not
+     *$parameter : no parameter
+     *$return : returns the integer value
+     */
     public static function getInt()
     {
         fscanf(STDIN, "%d\n", $n);

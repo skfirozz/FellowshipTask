@@ -1,30 +1,30 @@
 [
     {
-        "firstName": "karim",
-        "lastName": "karim",
-        "address": "bapatla",
-        "city": "guntue",
-        "state": "karna",
-        "zipcode": 55,
-        "phoneNumber": 55
+        "firstName": "anna",
+        "lastName": "banna",
+        "address": "banglore",
+        "city": null,
+        "state": "ka",
+        "zipcode": 522000,
+        "phoneNumber": 123456789
     },
     {
-        "firstName": "akhilesh",
-        "lastName": "burla",
-        "address": "bang",
-        "city": "bang",
-        "state": "karnataka",
-        "zipcode": 560029,
-        "phoneNumber": 956
+        "firstName": "d",
+        "lastName": "df",
+        "address": "sa",
+        "city": "fasawdw",
+        "state": "fgdsf",
+        "zipcode": 522000,
+        "phoneNumber": 520
     },
     {
-        "firstName": "firoz",
-        "lastName": "shaik",
-        "address": "karla",
-        "city": "guntur",
-        "state": "ap",
-        "zipcode": 522111,
-        "phoneNumber": 88868
+        "firstName": "dfddasfdsggg",
+        "lastName": "dfdfgdfgdfg",
+        "address": "fgdfggfdg",
+        "city": "gdgdsf",
+        "state": "g",
+        "zipcode": 522100,
+        "phoneNumber": 22
     },
     {
         "firstName": "kotu",
@@ -36,39 +36,12 @@
         "phoneNumber": 951
     },
     {
-        "firstName": "f",
-        "lastName": "dfg",
-        "address": "gfd",
-        "city": "gf",
-        "state": "fgd",
-        "zipcode": 2,
-        "phoneNumber": 1
-    },
-    {
-        "firstName": "d",
-        "lastName": "df",
-        "address": "sa",
-        "city": "fasawdw",
-        "state": "fgdsf",
-        "zipcode": 20,
-        "phoneNumber": 520
-    },
-    {
-        "firstName": "dfddasfdsggg",
-        "lastName": "dfdfgdfgdfg",
-        "address": "fgdfggfdg",
-        "city": "gdgdsf",
-        "state": "g",
-        "zipcode": 22,
-        "phoneNumber": 22
-    },
-    {
         "firstName": "kavitha",
         "lastName": "ka",
         "address": "dh",
         "city": "fg",
         "state": "fggd",
-        "zipcode": 2,
+        "zipcode": 522102,
         "phoneNumber": 20
     },
     {
@@ -77,16 +50,43 @@
         "address": "karna",
         "city": "mumbai",
         "state": "mumbai",
-        "zipcode": 5221,
+        "zipcode": 522102,
         "phoneNumber": 300
     },
     {
-        "firstName": "anna",
-        "lastName": "banna",
-        "address": "banglore",
-        "city": null,
-        "state": "ka",
-        "zipcode": 522000,
-        "phoneNumber": 123456789
+        "firstName": "karim",
+        "lastName": "karim",
+        "address": "bapatla",
+        "city": "guntue",
+        "state": "karna",
+        "zipcode": 522107,
+        "phoneNumber": 55
+    },
+    {
+        "firstName": "f",
+        "lastName": "dfg",
+        "address": "gfd",
+        "city": "gf",
+        "state": "fgd",
+        "zipcode": 522109,
+        "phoneNumber": 1
+    },
+    {
+        "firstName": "firoz",
+        "lastName": "shaik",
+        "address": "karla",
+        "city": "guntur",
+        "state": "ap",
+        "zipcode": 522111,
+        "phoneNumber": 88868
+    },
+    {
+        "firstName": "akhilesh",
+        "lastName": "burla",
+        "address": "bang",
+        "city": "bang",
+        "state": "karnataka",
+        "zipcode": 560029,
+        "phoneNumber": 956
     }
 ]

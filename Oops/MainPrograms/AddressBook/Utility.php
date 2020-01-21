@@ -43,17 +43,17 @@ class Utility
                 break;
             case 4:
                 echo "enter the file name to sort: ";
-                $filename = $filename . ".json";
+                $filename = readline().".json";
                 $array = json_decode(file_get_contents($filename));
-                $sortBy = 'zipCode';
+                $sortBy = 'firstName';
                 $sortedArray = $obj->sortData($array, $sortBy);
                 file_put_contents($filename, json_encode($sortedArray));
                 break;
             case 5:
                 echo "enter the file name to sort: ";
-                $filename = $filename . ".json";
+                $filename = readline().".json";
                 $array = json_decode(file_get_contents($filename));
-                $sortBy = 'firstName';
+                $sortBy = 'zipcode';
                 $sortedArray = $obj->sortData($array, $sortBy);
                 file_put_contents($filename, json_encode($sortedArray));
                 break;

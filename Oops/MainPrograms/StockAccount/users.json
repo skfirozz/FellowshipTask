@@ -12,6 +12,31 @@
     {
         "name": "baaaa",
         "shares": 10,
-        "balance": 200
+        "balance": 100
+    },
+    {
+        "name": "akhilesh",
+        "shares": 10,
+        "balance": 1000
+    },
+    {
+        "name": "fir",
+        "shares": 20,
+        "balance": 20000
+    },
+    {
+        "name": "a",
+        "shares": 10,
+        "balance": 100
+    },
+    {
+        "name": "ta",
+        "shares": 100,
+        "balance": 9200
+    },
+    {
+        "name": "aa",
+        "shares": 100,
+        "balance": 10000
     }
 ]

@@ -1,6 +1,6 @@
 <?php
 include '/home/admin1/Documents/Fellowship/OOps/Oops/MainPrograms/StockAccount/utility.php';
-include '/home/admin1/Documents/Fellowship/OOps/Oops/MainPrograms/StockAccount/StockAccount.php';
+include '/home/admin1/Documents/Fellowship/OOps/Oops/MainPrograms/StockAccount/BusinessLogic.php';
 function account()
 {
     $stockObject=new BusinessLogic();

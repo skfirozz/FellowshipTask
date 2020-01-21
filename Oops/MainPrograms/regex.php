@@ -11,7 +11,7 @@
 * @version : 7.2.24
 * @since : 11-01-2020
 *********************************************************************/
-include "/home/admin1/Documents/Fellowship/Oops/Utility/utility.php";
+include "/home/admin1/Documents/Fellowship/OOps/Oops/Utility/utility.php";
 $str="Hello <<name>>, We have your full 
 name as <<full name>> in our system. your contact number is 91­-xxxxxxxxxx.
 Please,let us know in case of any clarification Thank you BridgeLabz xx/xx/xxxx.";
@@ -19,6 +19,7 @@ echo "enter valid name: ";
 $name=Utility::nameValidation();
 echo "\nenter valid full name: ";
 $fName=Utility::fullNameValidation();
+echo $fName,"\n";
 echo "\nenter valid mobile Number: ";
 $number=Utility::numberValidation();
 $date=date("d/m/Y");

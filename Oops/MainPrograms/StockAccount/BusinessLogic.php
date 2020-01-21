@@ -37,10 +37,10 @@ class BusinessLogic{
     }
     function buy($amount,$symbol)
     {
-        echo "enter the shares file name: ";
-        $fileShare=readline();
-        echo "enter the user filename: ";
-        $fileUser=readline();
+        // echo "enter the shares file name: ";
+        $fileShare='shares.json';
+        // echo "enter the user filename: ";
+        $fileUser='users.json';
         echo "enter the user name: ";
         $username=Utility::nameValidation();
         $userData=json_decode(file_get_contents($fileUser));
@@ -81,10 +81,10 @@ class BusinessLogic{
     }
     function sell($amount,$symbol)
     {
-        echo "enter the shares file name: ";
-        $fileShare=readline();
-        echo "enter the user filename: ";
-        $fileUser=readline();
+        // echo "enter the shares file name: ";
+        $fileShare='shares.json';
+        // echo "enter the user filename: ";
+        $fileUser='users.json';
         echo "enter the user name: ";
         $username=Utility::nameValidation();
         $userData=json_decode(file_get_contents($fileUser));
@@ -99,8 +99,9 @@ class BusinessLogic{
                 }
             }
             for($i=0;$i<count($userData);$i++){
-                if($userData[$i]->name == $username &&  $userData[$i]->balance >= $amount){
+                if($userData[$i]->name == $username ){
                     $userData[$i]->balance += $amount;
+                    // $userData[$i]->shares-=floor($amount/$userData[$i]->price);
                 break;
                 }
             }
@@ -108,8 +109,8 @@ class BusinessLogic{
             echo "$symbol is not exist in $fileShare.......\n\n"; 
         }
         else echo "not found file name..";
-        BusinessLogic::saveFile($fileUser,$userData);
-        BusinessLogic::saveFile($fileShare,$data);
+        file_put_contents( $fileShare,json_encode( $data));
+        file_put_contents(  $fileUser,json_encode(  $userData));
     }
 }
 ?>

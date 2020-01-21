@@ -14,12 +14,17 @@ include '/home/admin1/Documents/Fellowship/OOps/Oops/MainPrograms/DataManagement
 include '/home/admin1/Documents/Fellowship/OOps/Oops/MainPrograms/DataManagement/BusinessLogic.php';
 $obj=new BusinessLogic();
 $n=0;
+$item=array();
+global $item;
 while($n< 4){
+  
     echo "enter items\n 1.rice\t\t2.paulse\t3.wheat\t4.exit\t";
     $n=Utility::getInt();
-    Data($n);
+    if($n>=4)
+break;
+    $data=$obj->Data($n);
+    array_push($item,$data);
 }
+
+// echo count($item);
 $obj->saveData($item);
-
-
-?>

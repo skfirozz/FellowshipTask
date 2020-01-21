@@ -1,20 +1,14 @@
 [
     {
-        "StockName": "dgfdfs",
-        "noOfStocks": 2000,
-        "price": 200,
-        "total": 400000
+        "StockName": "hi",
+        "noOfStocks": 100,
+        "price": 100,
+        "total": 10000
     },
     {
-        "StockName": "dfsg",
-        "noOfStocks": 200,
+        "StockName": "b",
+        "noOfStocks": 100,
         "price": 200,
-        "total": 40000
-    },
-    {
-        "StockName": "gfsd",
-        "noOfStocks": 200,
-        "price": 200,
-        "total": 40000
+        "total": 20000
     }
 ]

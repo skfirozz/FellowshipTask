@@ -4,36 +4,34 @@ class BusinessLogic
     public function Data($select)
     {
         $item=array();
-        global $item;
-        $array = array();
         switch ($select) {
             case 1:
                 $priceOfRice = 100;
-                $array["name"] = "rice";
+                $item["name"] = "rice";
                 echo "enter weight: ";
                 $weight = Utility::getInt();
-                $array["weight"] = $weight;
-                $array["priceOfWeight"] = $weight * $priceOfRice;
-                array_push($item, $array);
-                break;
+                $item["weight"] = $weight;
+                $item["priceOfWeight"] = $weight * $priceOfRice;
+            return $item;    
+            break;
             case 2:
                 $priceOfpaulse = 100;
-                $array["name"] = "paulse";
+                $item["name"] = "paulse";
                 echo "enter weight: ";
                 $weight =Utility::getInt();
-                $array["weight"] = $weight;
-                $array["priceOfWeight"] = $weight * $priceOfpaulse;
-                array_push($item, $array);
-                break;
+                $item["weight"] = $weight;
+                $item["priceOfWeight"] = $weight * $priceOfpaulse;
+                return $item;
+            break;
             case 3:
                 $priceOfRice = 100;
-                $array["name"] = "wheat";
+                $item["name"] = "wheat";
                 echo "enter weight: ";
                 $weight = Utility::getInt();
-                $array["weight"] = $weight;
-                $array["priceOfWeight"] = $weight * $priceOfRice;
-                array_push($item, $array);
-                break;
+                $item["weight"] = $weight;
+                $item["priceOfWeight"] = $weight * $priceOfRice;    
+                return $item;
+            break;
             default:
                 echo "EXIT";
                 break;

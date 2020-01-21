@@ -2,38 +2,18 @@
     "inventory": [
         {
             "name": "rice",
-            "weight": "1",
-            "priceOfWeight": 100
+            "weight": 10,
+            "priceOfWeight": 1000
         },
         {
-            "name": "rice",
-            "weight": "1",
-            "priceOfWeight": 100
+            "name": "paulse",
+            "weight": 30,
+            "priceOfWeight": 3000
         },
         {
-            "name": "rice",
-            "weight": "1",
-            "priceOfWeight": 100
-        },
-        {
-            "name": "rice",
-            "weight": "1",
-            "priceOfWeight": 100
-        },
-        {
-            "name": "rice",
-            "weight": "1",
-            "priceOfWeight": 100
-        },
-        {
-            "name": "rice",
-            "weight": "",
-            "priceOfWeight": 0
-        },
-        {
-            "name": "rice",
-            "weight": "1",
-            "priceOfWeight": 100
+            "name": "wheat",
+            "weight": 553,
+            "priceOfWeight": 55300
         }
     ]
 }

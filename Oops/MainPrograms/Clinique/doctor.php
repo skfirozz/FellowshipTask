@@ -11,7 +11,6 @@
 *********************************************************************/
 include '/home/admin1/Documents/Fellowship/OOps/Oops/MainPrograms/Clinique/Utility.php';
 include '/home/admin1/Documents/Fellowship/OOps/Oops/MainPrograms/Clinique/BusinessLogic.php';
-
 function run()
 {
     $obj = new BusinessLogic();

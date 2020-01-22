@@ -16,7 +16,7 @@ class ComputerFactory
 {
     public function getInfo($n)
     {
-        switch ($n) {
+        switch ($n) { 
             case 1:echo "YOUR LAPTOP DETAILS ARE : \n";
                 return new Laptop('Dell', '8GB', '1TB');
                 break;

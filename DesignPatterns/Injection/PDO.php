@@ -1,11 +1,15 @@
 <?php
-$host = '127.0.0.1';
-$dataBase = 'DataBase';
-$user = 'firoz';
-$password = 'MyFamily';
+$host = 'localhost';
+$dataBase = 'sample';
+$user = 'root';
+$password = 'root123';
 try {
-    $dataBaseServer = "mySql:host=$host;dbName=$dataBase";
-    $dbObject = new PDO($dataBaseServer, $user, $password);
+    $dbObject = new PDO("mysql:host=$host;dbname=$dataBase", $user, $password);
+    echo "***connected successfully***","\n";
+    $query = "SELECT * FROM table2 whare id=117";
+    $result=$dbObject->exec($query);
+    echo $result;
+    echo "inserted---------\n\n";
 } catch (PDOException $e) {
     echo "error occured while connecting please make sure your user name and passwords are correct ";
 }

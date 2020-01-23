@@ -3,6 +3,8 @@ abstract class Profile {
    /**
     * @return string
     */
+
+    
    public function getUserName()
    {
       return 'Foo';

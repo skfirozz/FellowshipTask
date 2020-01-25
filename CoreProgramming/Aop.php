@@ -1,21 +1,19 @@
 <?php
-
-class A
+class MyService
 {
-    /**
-     * Undocumented function
-     *@before fun2()
-     * @return void
-     */
-    public function fun()
+    public function doAdminStuff1()
     {
-        echo "hi\n";
+        echo "calling doAdmin1";
     }
-    public function fun2()
+    public function doAdminStuff2()
     {
-        echo "before\n";
-        return 10;
+        echo "calling doAdmin2";
     }
 }
-// $obj=new A();
-// $obj->fun();
+function adviceForDoAdmin()
+{
+    if ((!isset($_SESSION['user_type'])) || ($_SESSION['user_type'] !== 'admin')) {
+        throw new Exception('Sorry, you should be an admin to do this');
+    }
+}
+// aop_add_before('MyServices->doAdmin*()', 'adviceForDoAdmin');

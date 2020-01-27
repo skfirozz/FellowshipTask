@@ -1,19 +1,19 @@
 <?php
-class MyService
+
+class Admin
 {
-    public function doAdminStuff1()
+    public function showDashboard()
     {
-        echo "calling doAdmin1";
-    }
-    public function doAdminStuff2()
-    {
-        echo "calling doAdmin2";
+        echo 'Welcome to the admin panel.';
     }
 }
-function adviceForDoAdmin()
+
+function name()
 {
-    if ((!isset($_SESSION['user_type'])) || ($_SESSION['user_type'] !== 'admin')) {
-        throw new Exception('Sorry, you should be an admin to do this');
-    }
+    /**
+ * @before Admin->showDashboard()
+ *
+ */
+    echo "name\n";
 }
-// aop_add_before('MyServices->doAdmin*()', 'adviceForDoAdmin');
+name();

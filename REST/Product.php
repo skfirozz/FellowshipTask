@@ -17,7 +17,7 @@ class Product
     }
     public function create()
     {
-        $query = "INSERT INTO  $this->table_name SET name=:name, email=:email";
+        $query = "INSERT INTO  user SET name=:name, email=:email";
         $stmt = $this->conn->prepare($query);
         echo "\nenter name: ";
         $name = readline();

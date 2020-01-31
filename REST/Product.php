@@ -40,7 +40,7 @@ class Product
         $name = readline();
         echo "enter updated email: ";
         $email = readline();
-        echo "enter ID to change Update Data: ";
+        echo "enter ID to change  Update Data: ";
         $id = readline();
         $stmt->bindParam(":name", $name);
         $stmt->bindParam(":email", $email);

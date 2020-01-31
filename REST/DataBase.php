@@ -32,7 +32,7 @@ class Database
             return true;
         }
         else 
-        echo "not inserted";
+        echo "not  inserted\n";
         return false;
     }
     public function fetch_all()
@@ -50,5 +50,4 @@ class Database
 }
 $obj=new Database();
 $obj->getConnection();
-// $obj->create();
 $obj->fetch_all();

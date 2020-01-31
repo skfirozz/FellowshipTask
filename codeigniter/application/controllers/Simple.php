@@ -3,6 +3,6 @@ class Message
 {
     public function mess()
     {
-        echo "hello";
+        echo "hello php ";
     }
 }

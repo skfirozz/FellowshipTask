@@ -29,7 +29,7 @@ class RESTAPI
             exit($e->getMessage());
         }
     }
-    public function PUT()
+    public function Insert()
     {
         $query = "INSERT INTO  $this->table_name SET name=:name, email=:email";
         try {
@@ -77,7 +77,7 @@ class RESTAPI
 $DB = new Database();
 $dC = $DB->getConnection();
 $obj = new RESTAPI($dC);
-if ($obj->PUT()) {
+if ($obj->Insert()) {
     echo "inserted..\n";
 } else {
     echo "not inserted..\n";

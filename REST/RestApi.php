@@ -23,14 +23,14 @@ if ($num > 0) {
 } else {
     http_response_code(404);
     echo json_encode(
-        array("message" => "No products found.")
+        array("message" => "No  products  found.")
     );
 }
 $create = $product->create();
 if ($create) {
-    echo json_encode(array("message" => "Product was created.")), "\n";
+    echo json_encode(array("message" => " Product was created.")), "\n";
 } else {
-    echo json_encode(array("message" => "Unable to create product.")), "\n";
+    echo json_encode(array("message" => " Unable to create product.")), "\n";
 }
 
 if ($product->Update()) {

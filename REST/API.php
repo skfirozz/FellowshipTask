@@ -8,14 +8,14 @@ class RESTAPI
     {
         $this->conn = $db;
     }
-    public function READ()
+    public function READ() 
     {
         $query = "SELECT * FROM  $this->table_name;";
         $stmt = $this->conn->prepare($query);
         $stmt->execute();
         return $stmt;
     }
-    public function CREATE()
+    public function CREATE() 
     {
         $query = "INSERT INTO  $this->table_name SET name=:name, email=:email";
         $stmt = $this->conn->prepare($query);

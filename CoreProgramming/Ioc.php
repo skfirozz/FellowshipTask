@@ -33,8 +33,6 @@ class MicrosoftDatabase implements ConnectionInterface
         } catch (PDOException $e) {
             echo "error in ", __CLASS__, "\n";
         }
-
-        // echo __CLASS__;
     }
 }
 class main

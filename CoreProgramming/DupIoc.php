@@ -3,7 +3,7 @@ class EmailNotifier
 {
     public function notify()
     {
-        echo "Sending payment notification via email\n";
+        echo "Sending  payment  notification via email\n";
     }
 }
 class Billing 

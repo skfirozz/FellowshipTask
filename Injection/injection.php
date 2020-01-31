@@ -1,7 +1,7 @@
 <?php
 class A
 {
-    private $name = 'Injected Dpendency';
+    private $name = 'Injected  Dpendency';
     function display()
     {
         echo $this->name."\n";

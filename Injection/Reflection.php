@@ -1,6 +1,7 @@
 <?php
 abstract class Profile {
    /**
+    * //this program is just for testing how it is working
     * @return string
     */
 

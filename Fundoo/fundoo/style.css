@@ -1,0 +1,40 @@
+#frm {
+    border: rgb(218, 113, 81);
+    width: 20%;
+    border-radius: 50px 20px;
+    margin: center;
+}
+
+body {
+    background-color: #b8b3b3;
+}
+
+#button {
+    color: rgb(170, 168, 159);
+    background: #f7faf8;
+    padding: 5px;
+    margin-left: 10%;
+}
+
+a:hover {
+    background-color: rgb(255, 94, 0);
+    width: 20%;
+}
+
+h1 {
+    color: #b65757;
+    text-align: center;
+    font-family: "SIMPSON";
+}
+
+form {
+    width: 300px;
+    margin: 0 auto;
+}
+
+
+/* #example1 {
+    border: 2px solid red;
+    padding: 10px;
+    border-radius: 2px;
+} */

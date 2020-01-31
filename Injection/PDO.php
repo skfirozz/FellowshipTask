@@ -2,11 +2,11 @@
 $host = 'localhost';
 $dataBase = 'sample';
 $user = 'root';
-$password = 'root123';
+$password = 'Admin@12345';
 try {
     $dbObject = new PDO("mysql:host=$host;dbname=$dataBase", $user, $password);
     echo "***connected successfully***", "\n";
-    $query = "INSERT INTO table2(name,email) VALUES('karim','karim@gmail.com')";
+    $query = "INSERT INTO table2(name,email)  VALUES ('karim','karim@gmail.com')";
     if ($dbObject->exec($query)) {
         echo "inserted---------\n\n";
     }

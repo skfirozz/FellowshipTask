@@ -11,7 +11,7 @@ class Admin
 function name()
 {
     /**
- * @before Admin->showDashboard()
+ * @before  Admin->showDashboard()
  *
  */
     echo "name\n";
